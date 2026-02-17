@@ -11,7 +11,7 @@ namespace multimedialni_panel
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Multimedial_panel());
+            Application.Run(new Multimedial_panel_zapas());
         }
     }
 }
