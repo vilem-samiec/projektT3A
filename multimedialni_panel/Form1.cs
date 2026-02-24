@@ -16,5 +16,10 @@ namespace multimedialni_panel
         {
 
         }
+
+        private void Cast_zapasu_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
