@@ -45,6 +45,7 @@
             pause = new Button();
             button_goal_horn_d = new Button();
             lomeno = new Label();
+            castZapasu = new Label();
             ((System.ComponentModel.ISupportInitialize)logo_team_d).BeginInit();
             ((System.ComponentModel.ISupportInitialize)logo_team_h).BeginInit();
             SuspendLayout();
@@ -66,7 +67,7 @@
             Score_d.Name = "Score_d";
             Score_d.Size = new Size(139, 57);
             Score_d.TabIndex = 5;
-            Score_d.Text = "Skore";
+            Score_d.Text = "Skóre";
             // 
             // Score_h
             // 
@@ -76,7 +77,7 @@
             Score_h.Name = "Score_h";
             Score_h.Size = new Size(139, 57);
             Score_h.TabIndex = 6;
-            Score_h.Text = "Skore";
+            Score_h.Text = "Skóre";
             // 
             // Cast_zapasu
             // 
@@ -172,6 +173,7 @@
             button_goal_horn_h.TabIndex = 17;
             button_goal_horn_h.Text = "GOAL";
             button_goal_horn_h.UseVisualStyleBackColor = true;
+            button_goal_horn_h.Click += button_goal_horn_h_Click;
             // 
             // nastaveni
             // 
@@ -199,6 +201,7 @@
             button_goal_horn_d.TabIndex = 16;
             button_goal_horn_d.Text = "GOAL";
             button_goal_horn_d.UseVisualStyleBackColor = true;
+            button_goal_horn_d.Click += button_goal_horn_d_Click;
             // 
             // lomeno
             // 
@@ -210,11 +213,22 @@
             lomeno.TabIndex = 20;
             lomeno.Text = ":";
             // 
+            // castZapasu
+            // 
+            castZapasu.AutoSize = true;
+            castZapasu.Font = new Font("Swis721 BlkCn BT", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            castZapasu.Location = new Point(440, 64);
+            castZapasu.Name = "castZapasu";
+            castZapasu.Size = new Size(136, 29);
+            castZapasu.TabIndex = 21;
+            castZapasu.Text = "Část zápasu";
+            // 
             // Multimedial_panel_zapas
             // 
             AutoScaleDimensions = new SizeF(6F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1015, 650);
+            Controls.Add(castZapasu);
             Controls.Add(lomeno);
             Controls.Add(pause);
             Controls.Add(nastaveni);
@@ -259,5 +273,6 @@
         private Button pause;
         private Button button_goal_horn_d;
         private Label lomeno;
+        private Label castZapasu;
     }
 }
