@@ -31,7 +31,6 @@
             button_start_stop = new Button();
             Score_d = new Label();
             Score_h = new Label();
-            Cast_zapasu = new Label();
             team_d = new Label();
             team_h = new Label();
             Cas = new Label();
@@ -39,15 +38,20 @@
             trest_h = new Label();
             logo_team_d = new PictureBox();
             logo_team_h = new PictureBox();
-            button_novy_zapas = new Button();
             button_goal_horn_h = new Button();
-            nastaveni = new Button();
             pause = new Button();
             button_goal_horn_d = new Button();
             lomeno = new Label();
             castZapasu = new Label();
+            menuStrip1 = new MenuStrip();
+            možnostiToolStripMenuItem = new ToolStripMenuItem();
+            novýZápasToolStripMenuItem1 = new ToolStripMenuItem();
+            nastaveníToolStripMenuItem1 = new ToolStripMenuItem();
+            logaTýmuToolStripMenuItem = new ToolStripMenuItem();
+            kONECToolStripMenuItem1 = new ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)logo_team_d).BeginInit();
             ((System.ComponentModel.ISupportInitialize)logo_team_h).BeginInit();
+            menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // button_start_stop
@@ -63,7 +67,7 @@
             // 
             Score_d.AutoSize = true;
             Score_d.Font = new Font("Swis721 BlkCn BT", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Score_d.Location = new Point(325, 93);
+            Score_d.Location = new Point(325, 177);
             Score_d.Name = "Score_d";
             Score_d.Size = new Size(139, 57);
             Score_d.TabIndex = 5;
@@ -73,27 +77,17 @@
             // 
             Score_h.AutoSize = true;
             Score_h.Font = new Font("Swis721 BlkCn BT", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Score_h.Location = new Point(552, 93);
+            Score_h.Location = new Point(552, 177);
             Score_h.Name = "Score_h";
             Score_h.Size = new Size(139, 57);
             Score_h.TabIndex = 6;
             Score_h.Text = "Skóre";
             // 
-            // Cast_zapasu
-            // 
-            Cast_zapasu.AutoSize = true;
-            Cast_zapasu.Location = new Point(204, 13);
-            Cast_zapasu.Name = "Cast_zapasu";
-            Cast_zapasu.Size = new Size(76, 15);
-            Cast_zapasu.TabIndex = 7;
-            Cast_zapasu.Text = "ČÁST ZÁPASU";
-            Cast_zapasu.Click += Cast_zapasu_Click;
-            // 
             // team_d
             // 
             team_d.AutoSize = true;
             team_d.Font = new Font("Swis721 BlkCn BT", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            team_d.Location = new Point(36, 230);
+            team_d.Location = new Point(36, 314);
             team_d.Name = "team_d";
             team_d.Size = new Size(283, 57);
             team_d.TabIndex = 8;
@@ -104,7 +98,7 @@
             // 
             team_h.AutoSize = true;
             team_h.Font = new Font("Swis721 BlkCn BT", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            team_h.Location = new Point(697, 230);
+            team_h.Location = new Point(697, 314);
             team_h.Name = "team_h";
             team_h.Size = new Size(283, 57);
             team_h.TabIndex = 9;
@@ -114,7 +108,7 @@
             // 
             Cas.AutoSize = true;
             Cas.Font = new Font("Swis721 BlkCn BT", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Cas.Location = new Point(457, 12);
+            Cas.Location = new Point(457, 96);
             Cas.Name = "Cas";
             Cas.Size = new Size(105, 57);
             Cas.TabIndex = 10;
@@ -124,7 +118,7 @@
             // 
             trest_d.AutoSize = true;
             trest_d.Font = new Font("Swis721 BlkCn BT", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            trest_d.Location = new Point(36, 287);
+            trest_d.Location = new Point(36, 371);
             trest_d.Name = "trest_d";
             trest_d.Size = new Size(76, 29);
             trest_d.TabIndex = 11;
@@ -134,7 +128,7 @@
             // 
             trest_h.AutoSize = true;
             trest_h.Font = new Font("Swis721 BlkCn BT", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            trest_h.Location = new Point(904, 287);
+            trest_h.Location = new Point(904, 371);
             trest_h.Name = "trest_h";
             trest_h.Size = new Size(76, 29);
             trest_h.TabIndex = 12;
@@ -142,7 +136,7 @@
             // 
             // logo_team_d
             // 
-            logo_team_d.Location = new Point(697, 12);
+            logo_team_d.Location = new Point(697, 96);
             logo_team_d.Name = "logo_team_d";
             logo_team_d.Size = new Size(200, 200);
             logo_team_d.TabIndex = 13;
@@ -150,20 +144,11 @@
             // 
             // logo_team_h
             // 
-            logo_team_h.Location = new Point(119, 12);
+            logo_team_h.Location = new Point(119, 96);
             logo_team_h.Name = "logo_team_h";
             logo_team_h.Size = new Size(200, 200);
             logo_team_h.TabIndex = 14;
             logo_team_h.TabStop = false;
-            // 
-            // button_novy_zapas
-            // 
-            button_novy_zapas.Location = new Point(855, 573);
-            button_novy_zapas.Name = "button_novy_zapas";
-            button_novy_zapas.Size = new Size(150, 64);
-            button_novy_zapas.TabIndex = 15;
-            button_novy_zapas.Text = "NOVÝ";
-            button_novy_zapas.UseVisualStyleBackColor = true;
             // 
             // button_goal_horn_h
             // 
@@ -174,15 +159,6 @@
             button_goal_horn_h.Text = "GOAL";
             button_goal_horn_h.UseVisualStyleBackColor = true;
             button_goal_horn_h.Click += button_goal_horn_h_Click;
-            // 
-            // nastaveni
-            // 
-            nastaveni.Location = new Point(855, 502);
-            nastaveni.Name = "nastaveni";
-            nastaveni.Size = new Size(150, 64);
-            nastaveni.TabIndex = 18;
-            nastaveni.Text = "NASTAVENÍ";
-            nastaveni.UseVisualStyleBackColor = true;
             // 
             // pause
             // 
@@ -207,7 +183,7 @@
             // 
             lomeno.AutoSize = true;
             lomeno.Font = new Font("Swis721 BlkCn BT", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lomeno.Location = new Point(492, 93);
+            lomeno.Location = new Point(492, 177);
             lomeno.Name = "lomeno";
             lomeno.Size = new Size(39, 57);
             lomeno.TabIndex = 20;
@@ -217,24 +193,65 @@
             // 
             castZapasu.AutoSize = true;
             castZapasu.Font = new Font("Swis721 BlkCn BT", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            castZapasu.Location = new Point(440, 64);
+            castZapasu.Location = new Point(440, 148);
             castZapasu.Name = "castZapasu";
             castZapasu.Size = new Size(136, 29);
             castZapasu.TabIndex = 21;
             castZapasu.Text = "Část zápasu";
+            // 
+            // menuStrip1
+            // 
+            menuStrip1.Items.AddRange(new ToolStripItem[] { možnostiToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(1015, 24);
+            menuStrip1.TabIndex = 22;
+            menuStrip1.Text = "menuStrip1";
+            // 
+            // možnostiToolStripMenuItem
+            // 
+            možnostiToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { novýZápasToolStripMenuItem1, nastaveníToolStripMenuItem1, kONECToolStripMenuItem1 });
+            možnostiToolStripMenuItem.Name = "možnostiToolStripMenuItem";
+            možnostiToolStripMenuItem.Size = new Size(68, 20);
+            možnostiToolStripMenuItem.Text = "Možnosti";
+            // 
+            // novýZápasToolStripMenuItem1
+            // 
+            novýZápasToolStripMenuItem1.Name = "novýZápasToolStripMenuItem1";
+            novýZápasToolStripMenuItem1.Size = new Size(134, 22);
+            novýZápasToolStripMenuItem1.Text = "Nový zápas";
+            // 
+            // nastaveníToolStripMenuItem1
+            // 
+            nastaveníToolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { logaTýmuToolStripMenuItem });
+            nastaveníToolStripMenuItem1.Name = "nastaveníToolStripMenuItem1";
+            nastaveníToolStripMenuItem1.Size = new Size(134, 22);
+            nastaveníToolStripMenuItem1.Text = "Nastavení";
+            // 
+            // logaTýmuToolStripMenuItem
+            // 
+            logaTýmuToolStripMenuItem.Name = "logaTýmuToolStripMenuItem";
+            logaTýmuToolStripMenuItem.Size = new Size(131, 22);
+            logaTýmuToolStripMenuItem.Text = "Loga týmu";
+            logaTýmuToolStripMenuItem.Click += logaTýmuToolStripMenuItem_Click;
+            // 
+            // kONECToolStripMenuItem1
+            // 
+            kONECToolStripMenuItem1.Name = "kONECToolStripMenuItem1";
+            kONECToolStripMenuItem1.Size = new Size(134, 22);
+            kONECToolStripMenuItem1.Text = "KONEC";
             // 
             // Multimedial_panel_zapas
             // 
             AutoScaleDimensions = new SizeF(6F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1015, 650);
+            Controls.Add(menuStrip1);
             Controls.Add(castZapasu);
             Controls.Add(lomeno);
             Controls.Add(pause);
-            Controls.Add(nastaveni);
             Controls.Add(button_goal_horn_h);
             Controls.Add(button_goal_horn_d);
-            Controls.Add(button_novy_zapas);
             Controls.Add(logo_team_h);
             Controls.Add(logo_team_d);
             Controls.Add(trest_h);
@@ -242,15 +259,18 @@
             Controls.Add(Cas);
             Controls.Add(team_h);
             Controls.Add(team_d);
-            Controls.Add(Cast_zapasu);
             Controls.Add(Score_h);
             Controls.Add(Score_d);
             Controls.Add(button_start_stop);
             Font = new Font("Swis721 BlkCn BT", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            MainMenuStrip = menuStrip1;
             Name = "Multimedial_panel_zapas";
             Text = "Multimediální panel";
+            Load += Multimedial_panel_zapas_Load;
             ((System.ComponentModel.ISupportInitialize)logo_team_d).EndInit();
             ((System.ComponentModel.ISupportInitialize)logo_team_h).EndInit();
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -259,7 +279,6 @@
         private Button button_start_stop;
         private Label Score_d;
         private Label Score_h;
-        private Label Cast_zapasu;
         private Label team_d;
         private Label team_h;
         private Label Cas;
@@ -267,12 +286,16 @@
         private Label trest_h;
         private PictureBox logo_team_d;
         private PictureBox logo_team_h;
-        private Button button_novy_zapas;
         private Button button_goal_horn_h;
-        private Button nastaveni;
         private Button pause;
         private Button button_goal_horn_d;
         private Label lomeno;
         private Label castZapasu;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem možnostiToolStripMenuItem;
+        private ToolStripMenuItem novýZápasToolStripMenuItem1;
+        private ToolStripMenuItem nastaveníToolStripMenuItem1;
+        private ToolStripMenuItem kONECToolStripMenuItem1;
+        private ToolStripMenuItem logaTýmuToolStripMenuItem;
     }
 }
