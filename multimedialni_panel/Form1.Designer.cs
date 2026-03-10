@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             button_start_stop = new Button();
-            Score_d = new Label();
-            Score_h = new Label();
+            labelScoreHome = new Label();
+            labelScoreAway = new Label();
             labelHomeTeam = new Label();
             labelAwayTeam = new Label();
             Cas = new Label();
@@ -49,9 +50,16 @@
             nastaveníToolStripMenuItem1 = new ToolStripMenuItem();
             logaTýmuToolStripMenuItem = new ToolStripMenuItem();
             jménaTýmůToolStripMenuItem = new ToolStripMenuItem();
+            sportToolStripMenuItem = new ToolStripMenuItem();
+            hokejToolStripMenuItem = new ToolStripMenuItem();
+            fotbalToolStripMenuItem = new ToolStripMenuItem();
             kONECToolStripMenuItem1 = new ToolStripMenuItem();
+            korekceSkóreToolStripMenuItem = new ToolStripMenuItem();
+            odebratDomácíToolStripMenuItem = new ToolStripMenuItem();
+            odebratHostéToolStripMenuItem = new ToolStripMenuItem();
             button1 = new Button();
             button2 = new Button();
+            gameTimer = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)pictureAwayTeam).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureHomeTeam).BeginInit();
             menuStrip1.SuspendLayout();
@@ -68,25 +76,25 @@
             button_start_stop.Text = "START";
             button_start_stop.UseVisualStyleBackColor = false;
             // 
-            // Score_d
+            // labelScoreHome
             // 
-            Score_d.AutoSize = true;
-            Score_d.Font = new Font("Swis721 BlkCn BT", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Score_d.Location = new Point(325, 177);
-            Score_d.Name = "Score_d";
-            Score_d.Size = new Size(139, 57);
-            Score_d.TabIndex = 5;
-            Score_d.Text = "Skóre";
+            labelScoreHome.AutoSize = true;
+            labelScoreHome.Font = new Font("Swis721 BlkCn BT", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelScoreHome.Location = new Point(325, 177);
+            labelScoreHome.Name = "labelScoreHome";
+            labelScoreHome.Size = new Size(139, 57);
+            labelScoreHome.TabIndex = 5;
+            labelScoreHome.Text = "Skóre";
             // 
-            // Score_h
+            // labelScoreAway
             // 
-            Score_h.AutoSize = true;
-            Score_h.Font = new Font("Swis721 BlkCn BT", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Score_h.Location = new Point(552, 177);
-            Score_h.Name = "Score_h";
-            Score_h.Size = new Size(139, 57);
-            Score_h.TabIndex = 6;
-            Score_h.Text = "Skóre";
+            labelScoreAway.AutoSize = true;
+            labelScoreAway.Font = new Font("Swis721 BlkCn BT", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelScoreAway.Location = new Point(552, 177);
+            labelScoreAway.Name = "labelScoreAway";
+            labelScoreAway.Size = new Size(139, 57);
+            labelScoreAway.TabIndex = 6;
+            labelScoreAway.Text = "Skóre";
             // 
             // labelHomeTeam
             // 
@@ -207,7 +215,7 @@
             // 
             // menuStrip1
             // 
-            menuStrip1.Items.AddRange(new ToolStripItem[] { možnostiToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { možnostiToolStripMenuItem, korekceSkóreToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(1015, 24);
@@ -224,35 +232,78 @@
             // novýZápasToolStripMenuItem1
             // 
             novýZápasToolStripMenuItem1.Name = "novýZápasToolStripMenuItem1";
-            novýZápasToolStripMenuItem1.Size = new Size(134, 22);
+            novýZápasToolStripMenuItem1.Size = new Size(180, 22);
             novýZápasToolStripMenuItem1.Text = "Nový zápas";
+            novýZápasToolStripMenuItem1.Click += novýZápasToolStripMenuItem1_Click;
             // 
             // nastaveníToolStripMenuItem1
             // 
-            nastaveníToolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { logaTýmuToolStripMenuItem, jménaTýmůToolStripMenuItem });
+            nastaveníToolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { logaTýmuToolStripMenuItem, jménaTýmůToolStripMenuItem, sportToolStripMenuItem });
             nastaveníToolStripMenuItem1.Name = "nastaveníToolStripMenuItem1";
-            nastaveníToolStripMenuItem1.Size = new Size(134, 22);
+            nastaveníToolStripMenuItem1.Size = new Size(180, 22);
             nastaveníToolStripMenuItem1.Text = "Nastavení";
             // 
             // logaTýmuToolStripMenuItem
             // 
             logaTýmuToolStripMenuItem.Name = "logaTýmuToolStripMenuItem";
-            logaTýmuToolStripMenuItem.Size = new Size(139, 22);
+            logaTýmuToolStripMenuItem.Size = new Size(180, 22);
             logaTýmuToolStripMenuItem.Text = "Loga týmů";
             logaTýmuToolStripMenuItem.Click += logaTýmuToolStripMenuItem_Click;
             // 
             // jménaTýmůToolStripMenuItem
             // 
             jménaTýmůToolStripMenuItem.Name = "jménaTýmůToolStripMenuItem";
-            jménaTýmůToolStripMenuItem.Size = new Size(139, 22);
+            jménaTýmůToolStripMenuItem.Size = new Size(180, 22);
             jménaTýmůToolStripMenuItem.Text = "Jména týmů";
             jménaTýmůToolStripMenuItem.Click += jménaTýmůToolStripMenuItem_Click;
+            // 
+            // sportToolStripMenuItem
+            // 
+            sportToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { hokejToolStripMenuItem, fotbalToolStripMenuItem });
+            sportToolStripMenuItem.Name = "sportToolStripMenuItem";
+            sportToolStripMenuItem.Size = new Size(180, 22);
+            sportToolStripMenuItem.Text = "Sport";
+            // 
+            // hokejToolStripMenuItem
+            // 
+            hokejToolStripMenuItem.Name = "hokejToolStripMenuItem";
+            hokejToolStripMenuItem.Size = new Size(180, 22);
+            hokejToolStripMenuItem.Text = "Hokej";
+            hokejToolStripMenuItem.Click += hokejToolStripMenuItem_Click;
+            // 
+            // fotbalToolStripMenuItem
+            // 
+            fotbalToolStripMenuItem.Name = "fotbalToolStripMenuItem";
+            fotbalToolStripMenuItem.Size = new Size(180, 22);
+            fotbalToolStripMenuItem.Text = "Fotbal";
+            fotbalToolStripMenuItem.Click += fotbalToolStripMenuItem_Click;
             // 
             // kONECToolStripMenuItem1
             // 
             kONECToolStripMenuItem1.Name = "kONECToolStripMenuItem1";
-            kONECToolStripMenuItem1.Size = new Size(134, 22);
+            kONECToolStripMenuItem1.Size = new Size(180, 22);
             kONECToolStripMenuItem1.Text = "KONEC";
+            // 
+            // korekceSkóreToolStripMenuItem
+            // 
+            korekceSkóreToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { odebratDomácíToolStripMenuItem, odebratHostéToolStripMenuItem });
+            korekceSkóreToolStripMenuItem.Name = "korekceSkóreToolStripMenuItem";
+            korekceSkóreToolStripMenuItem.Size = new Size(92, 20);
+            korekceSkóreToolStripMenuItem.Text = "Korekce skóre";
+            // 
+            // odebratDomácíToolStripMenuItem
+            // 
+            odebratDomácíToolStripMenuItem.Name = "odebratDomácíToolStripMenuItem";
+            odebratDomácíToolStripMenuItem.Size = new Size(185, 22);
+            odebratDomácíToolStripMenuItem.Text = "Odebrat Bod Domácí";
+            odebratDomácíToolStripMenuItem.Click += odebratDomácíToolStripMenuItem_Click;
+            // 
+            // odebratHostéToolStripMenuItem
+            // 
+            odebratHostéToolStripMenuItem.Name = "odebratHostéToolStripMenuItem";
+            odebratHostéToolStripMenuItem.Size = new Size(185, 22);
+            odebratHostéToolStripMenuItem.Text = "Odebrat Bod Hosté";
+            odebratHostéToolStripMenuItem.Click += odebratHostéToolStripMenuItem_Click;
             // 
             // button1
             // 
@@ -274,6 +325,10 @@
             button2.Text = "Trest";
             button2.UseVisualStyleBackColor = false;
             // 
+            // gameTimer
+            // 
+            gameTimer.Tick += this.timer1_Tick;
+            // 
             // Multimedial_panel_zapas
             // 
             AutoScaleDimensions = new SizeF(6F, 15F);
@@ -294,8 +349,8 @@
             Controls.Add(Cas);
             Controls.Add(labelAwayTeam);
             Controls.Add(labelHomeTeam);
-            Controls.Add(Score_h);
-            Controls.Add(Score_d);
+            Controls.Add(labelScoreAway);
+            Controls.Add(labelScoreHome);
             Controls.Add(button_start_stop);
             Font = new Font("Swis721 BlkCn BT", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             MainMenuStrip = menuStrip1;
@@ -312,8 +367,8 @@
 
         #endregion
         private Button button_start_stop;
-        private Label Score_d;
-        private Label Score_h;
+        private Label labelScoreHome;
+        private Label labelScoreAway;
         private Label labelHomeTeam;
         private Label labelAwayTeam;
         private Label Cas;
@@ -335,5 +390,13 @@
         private ToolStripMenuItem jménaTýmůToolStripMenuItem;
         private Button button1;
         private Button button2;
+        private ToolStripMenuItem korekceSkóreToolStripMenuItem;
+        private ToolStripMenuItem odebratDomácíToolStripMenuItem;
+        private ToolStripMenuItem odebratHostéToolStripMenuItem;
+        private ToolStripMenuItem sportToolStripMenuItem;
+        private ToolStripMenuItem hokejToolStripMenuItem;
+        private ToolStripMenuItem fotbalToolStripMenuItem;
+        private System.Windows.Forms.Timer gameTimer;
+        private System.Windows.Forms.Timer gameTimer;
     }
 }
