@@ -35,7 +35,12 @@ namespace multimedialni_panel
             if (open.ShowDialog() == DialogResult.OK)
             {
                 Image img = Image.FromFile(open.FileName);
-                pictureHome.Image = ResizeLogo(img);
+                Bitmap resized = new Bitmap(img, new Size(200, 200));
+
+                pictureHome.Image = resized;
+
+                string path = Path.Combine(Application.StartupPath, "Loga", "home.png");
+                resized.Save(path);
             }
         }
 
@@ -47,7 +52,12 @@ namespace multimedialni_panel
             if (open.ShowDialog() == DialogResult.OK)
             {
                 Image img = Image.FromFile(open.FileName);
-                pictureAway.Image = ResizeLogo(img);
+                Bitmap resized = new Bitmap(img, new Size(200, 200));
+
+                pictureAway.Image = resized;
+
+                string path = Path.Combine(Application.StartupPath, "Loga", "away.png");
+                resized.Save(path);
             }
         }
     }

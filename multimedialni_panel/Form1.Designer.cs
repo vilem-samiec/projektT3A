@@ -31,13 +31,13 @@
             button_start_stop = new Button();
             Score_d = new Label();
             Score_h = new Label();
-            team_d = new Label();
-            team_h = new Label();
+            labelHomeTeam = new Label();
+            labelAwayTeam = new Label();
             Cas = new Label();
             trest_d = new Label();
             trest_h = new Label();
-            logo_team_d = new PictureBox();
-            logo_team_h = new PictureBox();
+            pictureAwayTeam = new PictureBox();
+            pictureHomeTeam = new PictureBox();
             button_goal_horn_h = new Button();
             pause = new Button();
             button_goal_horn_d = new Button();
@@ -48,20 +48,25 @@
             novýZápasToolStripMenuItem1 = new ToolStripMenuItem();
             nastaveníToolStripMenuItem1 = new ToolStripMenuItem();
             logaTýmuToolStripMenuItem = new ToolStripMenuItem();
+            jménaTýmůToolStripMenuItem = new ToolStripMenuItem();
             kONECToolStripMenuItem1 = new ToolStripMenuItem();
-            ((System.ComponentModel.ISupportInitialize)logo_team_d).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)logo_team_h).BeginInit();
+            button1 = new Button();
+            button2 = new Button();
+            ((System.ComponentModel.ISupportInitialize)pictureAwayTeam).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureHomeTeam).BeginInit();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // button_start_stop
             // 
+            button_start_stop.BackColor = Color.Chartreuse;
+            button_start_stop.ForeColor = SystemColors.ControlText;
             button_start_stop.Location = new Point(351, 573);
             button_start_stop.Name = "button_start_stop";
             button_start_stop.Size = new Size(150, 64);
             button_start_stop.TabIndex = 1;
             button_start_stop.Text = "START";
-            button_start_stop.UseVisualStyleBackColor = true;
+            button_start_stop.UseVisualStyleBackColor = false;
             // 
             // Score_d
             // 
@@ -83,26 +88,26 @@
             Score_h.TabIndex = 6;
             Score_h.Text = "Skóre";
             // 
-            // team_d
+            // labelHomeTeam
             // 
-            team_d.AutoSize = true;
-            team_d.Font = new Font("Swis721 BlkCn BT", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            team_d.Location = new Point(36, 314);
-            team_d.Name = "team_d";
-            team_d.Size = new Size(283, 57);
-            team_d.TabIndex = 8;
-            team_d.Text = "NÁZEV TÝMU";
-            team_d.Click += label1_Click;
+            labelHomeTeam.AutoSize = true;
+            labelHomeTeam.Font = new Font("Swis721 BlkCn BT", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelHomeTeam.Location = new Point(36, 314);
+            labelHomeTeam.Name = "labelHomeTeam";
+            labelHomeTeam.Size = new Size(283, 57);
+            labelHomeTeam.TabIndex = 8;
+            labelHomeTeam.Text = "NÁZEV TÝMU";
+            labelHomeTeam.Click += label1_Click;
             // 
-            // team_h
+            // labelAwayTeam
             // 
-            team_h.AutoSize = true;
-            team_h.Font = new Font("Swis721 BlkCn BT", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            team_h.Location = new Point(697, 314);
-            team_h.Name = "team_h";
-            team_h.Size = new Size(283, 57);
-            team_h.TabIndex = 9;
-            team_h.Text = "NÁZEV TÝMU";
+            labelAwayTeam.AutoSize = true;
+            labelAwayTeam.Font = new Font("Swis721 BlkCn BT", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelAwayTeam.Location = new Point(697, 314);
+            labelAwayTeam.Name = "labelAwayTeam";
+            labelAwayTeam.Size = new Size(283, 57);
+            labelAwayTeam.TabIndex = 9;
+            labelAwayTeam.Text = "NÁZEV TÝMU";
             // 
             // Cas
             // 
@@ -134,21 +139,21 @@
             trest_h.TabIndex = 12;
             trest_h.Text = "TREST";
             // 
-            // logo_team_d
+            // pictureAwayTeam
             // 
-            logo_team_d.Location = new Point(697, 96);
-            logo_team_d.Name = "logo_team_d";
-            logo_team_d.Size = new Size(200, 200);
-            logo_team_d.TabIndex = 13;
-            logo_team_d.TabStop = false;
+            pictureAwayTeam.Location = new Point(697, 96);
+            pictureAwayTeam.Name = "pictureAwayTeam";
+            pictureAwayTeam.Size = new Size(200, 200);
+            pictureAwayTeam.TabIndex = 13;
+            pictureAwayTeam.TabStop = false;
             // 
-            // logo_team_h
+            // pictureHomeTeam
             // 
-            logo_team_h.Location = new Point(119, 96);
-            logo_team_h.Name = "logo_team_h";
-            logo_team_h.Size = new Size(200, 200);
-            logo_team_h.TabIndex = 14;
-            logo_team_h.TabStop = false;
+            pictureHomeTeam.Location = new Point(119, 96);
+            pictureHomeTeam.Name = "pictureHomeTeam";
+            pictureHomeTeam.Size = new Size(200, 200);
+            pictureHomeTeam.TabIndex = 14;
+            pictureHomeTeam.TabStop = false;
             // 
             // button_goal_horn_h
             // 
@@ -162,12 +167,13 @@
             // 
             // pause
             // 
+            pause.BackColor = Color.Red;
             pause.Location = new Point(514, 573);
             pause.Name = "pause";
             pause.Size = new Size(150, 64);
             pause.TabIndex = 19;
             pause.Text = "PAUZA";
-            pause.UseVisualStyleBackColor = true;
+            pause.UseVisualStyleBackColor = false;
             // 
             // button_goal_horn_d
             // 
@@ -223,7 +229,7 @@
             // 
             // nastaveníToolStripMenuItem1
             // 
-            nastaveníToolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { logaTýmuToolStripMenuItem });
+            nastaveníToolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { logaTýmuToolStripMenuItem, jménaTýmůToolStripMenuItem });
             nastaveníToolStripMenuItem1.Name = "nastaveníToolStripMenuItem1";
             nastaveníToolStripMenuItem1.Size = new Size(134, 22);
             nastaveníToolStripMenuItem1.Text = "Nastavení";
@@ -231,9 +237,16 @@
             // logaTýmuToolStripMenuItem
             // 
             logaTýmuToolStripMenuItem.Name = "logaTýmuToolStripMenuItem";
-            logaTýmuToolStripMenuItem.Size = new Size(131, 22);
-            logaTýmuToolStripMenuItem.Text = "Loga týmu";
+            logaTýmuToolStripMenuItem.Size = new Size(139, 22);
+            logaTýmuToolStripMenuItem.Text = "Loga týmů";
             logaTýmuToolStripMenuItem.Click += logaTýmuToolStripMenuItem_Click;
+            // 
+            // jménaTýmůToolStripMenuItem
+            // 
+            jménaTýmůToolStripMenuItem.Name = "jménaTýmůToolStripMenuItem";
+            jménaTýmůToolStripMenuItem.Size = new Size(139, 22);
+            jménaTýmůToolStripMenuItem.Text = "Jména týmů";
+            jménaTýmůToolStripMenuItem.Click += jménaTýmůToolStripMenuItem_Click;
             // 
             // kONECToolStripMenuItem1
             // 
@@ -241,24 +254,46 @@
             kONECToolStripMenuItem1.Size = new Size(134, 22);
             kONECToolStripMenuItem1.Text = "KONEC";
             // 
+            // button1
+            // 
+            button1.BackColor = Color.Aqua;
+            button1.Location = new Point(12, 574);
+            button1.Name = "button1";
+            button1.Size = new Size(150, 64);
+            button1.TabIndex = 23;
+            button1.Text = "Trest";
+            button1.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.Aqua;
+            button2.Location = new Point(853, 574);
+            button2.Name = "button2";
+            button2.Size = new Size(150, 64);
+            button2.TabIndex = 24;
+            button2.Text = "Trest";
+            button2.UseVisualStyleBackColor = false;
+            // 
             // Multimedial_panel_zapas
             // 
             AutoScaleDimensions = new SizeF(6F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1015, 650);
+            Controls.Add(button2);
+            Controls.Add(button1);
             Controls.Add(menuStrip1);
             Controls.Add(castZapasu);
             Controls.Add(lomeno);
             Controls.Add(pause);
             Controls.Add(button_goal_horn_h);
             Controls.Add(button_goal_horn_d);
-            Controls.Add(logo_team_h);
-            Controls.Add(logo_team_d);
+            Controls.Add(pictureHomeTeam);
+            Controls.Add(pictureAwayTeam);
             Controls.Add(trest_h);
             Controls.Add(trest_d);
             Controls.Add(Cas);
-            Controls.Add(team_h);
-            Controls.Add(team_d);
+            Controls.Add(labelAwayTeam);
+            Controls.Add(labelHomeTeam);
             Controls.Add(Score_h);
             Controls.Add(Score_d);
             Controls.Add(button_start_stop);
@@ -267,8 +302,8 @@
             Name = "Multimedial_panel_zapas";
             Text = "Multimediální panel";
             Load += Multimedial_panel_zapas_Load;
-            ((System.ComponentModel.ISupportInitialize)logo_team_d).EndInit();
-            ((System.ComponentModel.ISupportInitialize)logo_team_h).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureAwayTeam).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureHomeTeam).EndInit();
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);
@@ -279,13 +314,13 @@
         private Button button_start_stop;
         private Label Score_d;
         private Label Score_h;
-        private Label team_d;
-        private Label team_h;
+        private Label labelHomeTeam;
+        private Label labelAwayTeam;
         private Label Cas;
         private Label trest_d;
         private Label trest_h;
-        private PictureBox logo_team_d;
-        private PictureBox logo_team_h;
+        private PictureBox pictureAwayTeam;
+        private PictureBox pictureHomeTeam;
         private Button button_goal_horn_h;
         private Button pause;
         private Button button_goal_horn_d;
@@ -297,5 +332,8 @@
         private ToolStripMenuItem nastaveníToolStripMenuItem1;
         private ToolStripMenuItem kONECToolStripMenuItem1;
         private ToolStripMenuItem logaTýmuToolStripMenuItem;
+        private ToolStripMenuItem jménaTýmůToolStripMenuItem;
+        private Button button1;
+        private Button button2;
     }
 }

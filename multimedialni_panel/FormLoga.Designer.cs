@@ -32,6 +32,7 @@
             pictureAway = new PictureBox();
             buttonHome = new Button();
             buttonAway = new Button();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureHome).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureAway).BeginInit();
             SuspendLayout();
@@ -76,21 +77,33 @@
             buttonAway.UseVisualStyleBackColor = true;
             buttonAway.Click += buttonAway_Click;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Swis721 BlkCn BT", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(335, 242);
+            label1.Name = "label1";
+            label1.Size = new Size(137, 15);
+            label1.TabIndex = 5;
+            label1.Text = "Loga musí být 200x200 px!";
+            // 
             // FormLoga
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label1);
             Controls.Add(buttonAway);
             Controls.Add(buttonHome);
             Controls.Add(pictureAway);
             Controls.Add(pictureHome);
             Name = "FormLoga";
-            Text = "FormLoga";
+            Text = "Loga týmů";
             Load += FormLoga_Load;
             ((System.ComponentModel.ISupportInitialize)pictureHome).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureAway).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -99,5 +112,6 @@
         private PictureBox pictureAway;
         private Button buttonHome;
         private Button buttonAway;
+        private Label label1;
     }
 }
