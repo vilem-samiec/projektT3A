@@ -156,7 +156,6 @@ namespace multimedialni_panel
                 labelScoreAway.Text = scoreAway.ToString();
             }
         }
-
         private void hokejToolStripMenuItem_Click(object sender, EventArgs e)
         {
             totalPeriods = 3;
@@ -168,7 +167,6 @@ namespace multimedialni_panel
             labelPeriod.Text = $"Tøetina: {currentPeriod}/{totalPeriods}";
             labelTime.Text = $"{currentMinutes:D2}:{currentSeconds:D2}";
 
-            StartTimer();
         }
 
         private void fotbalToolStripMenuItem_Click(object sender, EventArgs e)
@@ -182,9 +180,18 @@ namespace multimedialni_panel
             labelPeriod.Text = $"Poloèas: {currentPeriod}/{totalPeriods}";
             labelTime.Text = $"{currentMinutes:D2}:{currentSeconds:D2}";
 
-            StartTimer();
         }
-
+        private void UpdatePeriodLabel()
+        {
+            if (totalPeriods == 3)
+            {
+                labelPeriod.Text = $"Tøetina: {currentPeriod}/{totalPeriods}";
+            }
+            else if (totalPeriods == 2)
+            {
+                labelPeriod.Text = $"Poloèas: {currentPeriod}/{totalPeriods}";
+            }
+        }
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (currentSeconds == 0)
@@ -202,8 +209,6 @@ namespace multimedialni_panel
                     else
                     {
                         // konec zápasu
-                        gameTimer.Stop();
-                        MessageBox.Show("Konec zápasu!");
                     }
                     return;
                 }
