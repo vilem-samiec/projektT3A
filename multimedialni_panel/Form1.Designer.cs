@@ -67,7 +67,7 @@
             // 
             labelScoreHome.AutoSize = true;
             labelScoreHome.Font = new Font("Swis721 BlkCn BT", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelScoreHome.Location = new Point(325, 177);
+            labelScoreHome.Location = new Point(301, 177);
             labelScoreHome.Name = "labelScoreHome";
             labelScoreHome.Size = new Size(139, 57);
             labelScoreHome.TabIndex = 5;
@@ -77,7 +77,7 @@
             // 
             labelScoreAway.AutoSize = true;
             labelScoreAway.Font = new Font("Swis721 BlkCn BT", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelScoreAway.Location = new Point(552, 177);
+            labelScoreAway.Location = new Point(575, 177);
             labelScoreAway.Name = "labelScoreAway";
             labelScoreAway.Size = new Size(139, 57);
             labelScoreAway.TabIndex = 6;
@@ -87,7 +87,7 @@
             // 
             labelHomeTeam.AutoSize = true;
             labelHomeTeam.Font = new Font("Swis721 BlkCn BT", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelHomeTeam.Location = new Point(36, 314);
+            labelHomeTeam.Location = new Point(12, 314);
             labelHomeTeam.Name = "labelHomeTeam";
             labelHomeTeam.Size = new Size(283, 57);
             labelHomeTeam.TabIndex = 8;
@@ -98,7 +98,7 @@
             // 
             labelAwayTeam.AutoSize = true;
             labelAwayTeam.Font = new Font("Swis721 BlkCn BT", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelAwayTeam.Location = new Point(697, 314);
+            labelAwayTeam.Location = new Point(720, 314);
             labelAwayTeam.Name = "labelAwayTeam";
             labelAwayTeam.Size = new Size(283, 57);
             labelAwayTeam.TabIndex = 9;
@@ -106,13 +106,13 @@
             // 
             // labelTime
             // 
-            labelTime.AutoSize = true;
-            labelTime.Font = new Font("Swis721 BlkCn BT", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelTime.Location = new Point(457, 96);
-            labelTime.Name = "labelTime";
-            labelTime.Size = new Size(105, 57);
-            labelTime.TabIndex = 10;
-            labelTime.Text = "ČAS";
+            Cas.AutoSize = true;
+            Cas.Font = new Font("Swis721 BlkCn BT", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Cas.Location = new Point(457, 96);
+            Cas.Name = "Cas";
+            Cas.Size = new Size(105, 57);
+            Cas.TabIndex = 10;
+            Cas.Text = "ČAS";
             // 
             // labelFoulsHome
             // 
@@ -136,7 +136,7 @@
             // 
             // pictureAwayTeam
             // 
-            pictureAwayTeam.Location = new Point(697, 96);
+            pictureAwayTeam.Location = new Point(720, 96);
             pictureAwayTeam.Name = "pictureAwayTeam";
             pictureAwayTeam.Size = new Size(200, 200);
             pictureAwayTeam.TabIndex = 13;
@@ -144,7 +144,7 @@
             // 
             // pictureHomeTeam
             // 
-            pictureHomeTeam.Location = new Point(119, 96);
+            pictureHomeTeam.Location = new Point(95, 96);
             pictureHomeTeam.Name = "pictureHomeTeam";
             pictureHomeTeam.Size = new Size(200, 200);
             pictureHomeTeam.TabIndex = 14;
@@ -184,7 +184,7 @@
             // 
             lomeno.AutoSize = true;
             lomeno.Font = new Font("Swis721 BlkCn BT", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lomeno.Location = new Point(492, 177);
+            lomeno.Location = new Point(490, 177);
             lomeno.Name = "lomeno";
             lomeno.Size = new Size(39, 57);
             lomeno.TabIndex = 20;
