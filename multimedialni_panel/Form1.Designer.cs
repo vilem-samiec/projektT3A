@@ -106,13 +106,13 @@
             // 
             // labelTime
             // 
-            Cas.AutoSize = true;
-            Cas.Font = new Font("Swis721 BlkCn BT", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Cas.Location = new Point(457, 96);
-            Cas.Name = "Cas";
-            Cas.Size = new Size(105, 57);
-            Cas.TabIndex = 10;
-            Cas.Text = "ČAS";
+            labelTime.AutoSize = true;
+            labelTime.Font = new Font("Swis721 BlkCn BT", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelTime.Location = new Point(457, 96);
+            labelTime.Name = "labelTime";
+            labelTime.Size = new Size(105, 57);
+            labelTime.TabIndex = 10;
+            labelTime.Text = "ČAS";
             // 
             // labelFoulsHome
             // 
