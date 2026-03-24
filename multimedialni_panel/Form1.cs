@@ -209,6 +209,11 @@ namespace multimedialni_panel
                     else
                     {
                         // konec zápasu
+                        timer1.Stop();
+                        // Update UI to reflect finished match
+                        button3.Text = "START";
+                        button3.BackColor = Color.Green;
+                        pause.Enabled = false;
                     }
                     return;
                 }
@@ -221,6 +226,68 @@ namespace multimedialni_panel
             }
 
             labelTime.Text = $"{currentMinutes:D2}:{currentSeconds:D2}";
+        }
+
+        // Ensure that match timing is set before starting the timer
+        private void EnsureMatchSetup()
+        {
+            if (totalMinutes == 0 || totalPeriods == 0)
+            {
+                // default to fotbal if sport not selected
+                totalPeriods = 2;
+                currentPeriod = 1;
+                totalMinutes = 45;
+                currentMinutes = totalMinutes;
+                currentSeconds = 0;
+                UpdatePeriodLabel();
+                labelTime.Text = $"{currentMinutes:D2}:{currentSeconds:D2}";
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            EnsureMatchSetup();
+
+            if (!timer1.Enabled)
+            {
+                timer1.Start();
+                button3.Text = "STOP";
+                button3.BackColor = Color.Red;
+                pause.Enabled = true;
+                pause.Text = "PAUZA";
+                pause.BackColor = Color.Red;
+            }
+            else
+            {
+                timer1.Stop();
+                button3.Text = "START";
+                button3.BackColor = Color.Green;
+                pause.Enabled = false;
+                pause.Text = "PAUZA";
+                pause.BackColor = Color.Aqua;
+            }
+        }
+
+        private void pause_Click(object sender, EventArgs e)
+        {
+            // Pause / Resume logic
+            if (!timer1.Enabled)
+            {
+                // resume
+                timer1.Start();
+                pause.Text = "PAUZA";
+                pause.BackColor = Color.Red;
+                // ensure start button shows stop
+                button3.Text = "STOP";
+                button3.BackColor = Color.Red;
+            }
+            else
+            {
+                // pause
+                timer1.Stop();
+                pause.Text = "POKRAÈOVAT";
+                pause.BackColor = Color.Green;
+            }
         }
     }
 }
