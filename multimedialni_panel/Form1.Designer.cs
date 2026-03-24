@@ -157,9 +157,11 @@
             // 
             // pictureAwayTeam
             // 
+            pictureAwayTeam.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureAwayTeam.Location = new Point(720, 96);
             pictureAwayTeam.Name = "pictureAwayTeam";
             pictureAwayTeam.Size = new Size(200, 200);
+            pictureAwayTeam.SizeMode = PictureBoxSizeMode.Zoom;
             pictureAwayTeam.TabIndex = 13;
             pictureAwayTeam.TabStop = false;
             // Make picture scale with form and keep aspect ratio
@@ -171,6 +173,7 @@
             pictureHomeTeam.Location = new Point(95, 96);
             pictureHomeTeam.Name = "pictureHomeTeam";
             pictureHomeTeam.Size = new Size(200, 200);
+            pictureHomeTeam.SizeMode = PictureBoxSizeMode.Zoom;
             pictureHomeTeam.TabIndex = 14;
             pictureHomeTeam.TabStop = false;
             // Make picture scale with form and keep aspect ratio
@@ -190,6 +193,7 @@
             // 
             // pause
             // 
+            pause.Anchor = AnchorStyles.Bottom;
             pause.BackColor = Color.Red;
             pause.Location = new Point(514, 573);
             pause.Name = "pause";
@@ -329,6 +333,7 @@
             // 
             // button1
             // 
+            button1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             button1.BackColor = Color.Aqua;
             button1.Location = new Point(12, 574);
             button1.Name = "button1";
@@ -340,6 +345,7 @@
             // 
             // button2
             // 
+            button2.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             button2.BackColor = Color.Aqua;
             button2.Location = new Point(853, 574);
             button2.Name = "button2";
@@ -351,6 +357,7 @@
             // 
             // button3
             // 
+            button3.Anchor = AnchorStyles.Bottom;
             button3.BackColor = Color.Green;
             button3.Location = new Point(358, 573);
             button3.Name = "button3";
