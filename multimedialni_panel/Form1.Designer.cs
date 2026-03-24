@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             labelScoreHome = new Label();
             labelScoreAway = new Label();
             labelHomeTeam = new Label();
@@ -58,6 +59,7 @@
             button1 = new Button();
             button2 = new Button();
             button3 = new Button();
+            timer1 = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)pictureAwayTeam).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureHomeTeam).BeginInit();
             menuStrip1.SuspendLayout();
@@ -169,6 +171,7 @@
             pause.TabIndex = 19;
             pause.Text = "PAUZA";
             pause.UseVisualStyleBackColor = false;
+            pause.Click += pause_Click;
             // 
             // button_goal_horn_d
             // 
@@ -321,6 +324,12 @@
             button3.TabIndex = 25;
             button3.Text = "START";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
+            // 
+            // timer1
+            // 
+            timer1.Interval = 1000;
+            timer1.Tick += timer1_Tick;
             // 
             // Multimedial_panel_zapas
             // 
@@ -389,5 +398,6 @@
         private ToolStripMenuItem hokejToolStripMenuItem;
         private ToolStripMenuItem fotbalToolStripMenuItem;
         private Button button3;
+        private System.Windows.Forms.Timer timer1;
     }
 }
