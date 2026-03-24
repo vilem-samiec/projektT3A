@@ -164,9 +164,6 @@
             pictureAwayTeam.SizeMode = PictureBoxSizeMode.Zoom;
             pictureAwayTeam.TabIndex = 13;
             pictureAwayTeam.TabStop = false;
-            // Make picture scale with form and keep aspect ratio
-            pictureAwayTeam.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureAwayTeam.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             // 
             // pictureHomeTeam
             // 
@@ -176,12 +173,10 @@
             pictureHomeTeam.SizeMode = PictureBoxSizeMode.Zoom;
             pictureHomeTeam.TabIndex = 14;
             pictureHomeTeam.TabStop = false;
-            // Make picture scale with form and keep aspect ratio
-            pictureHomeTeam.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureHomeTeam.Anchor = AnchorStyles.Top | AnchorStyles.Left;
             // 
             // button_goal_horn_h
             // 
+            button_goal_horn_h.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             button_goal_horn_h.Location = new Point(686, 502);
             button_goal_horn_h.Name = "button_goal_horn_h";
             button_goal_horn_h.Size = new Size(152, 64);
@@ -189,7 +184,6 @@
             button_goal_horn_h.Text = "GOAL";
             button_goal_horn_h.UseVisualStyleBackColor = true;
             button_goal_horn_h.Click += button_goal_horn_h_Click;
-            button_goal_horn_h.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             // 
             // pause
             // 
@@ -202,10 +196,10 @@
             pause.Text = "PAUZA";
             pause.UseVisualStyleBackColor = false;
             pause.Click += pause_Click;
-            pause.Anchor = AnchorStyles.Bottom;
             // 
             // button_goal_horn_d
             // 
+            button_goal_horn_d.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             button_goal_horn_d.Location = new Point(189, 502);
             button_goal_horn_d.Name = "button_goal_horn_d";
             button_goal_horn_d.Size = new Size(152, 64);
@@ -213,7 +207,6 @@
             button_goal_horn_d.Text = "GOAL";
             button_goal_horn_d.UseVisualStyleBackColor = true;
             button_goal_horn_d.Click += button_goal_horn_d_Click;
-            button_goal_horn_d.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             // 
             // lomeno
             // 
@@ -341,7 +334,6 @@
             button1.TabIndex = 23;
             button1.Text = "Trest";
             button1.UseVisualStyleBackColor = false;
-            button1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             // 
             // button2
             // 
@@ -353,7 +345,6 @@
             button2.TabIndex = 24;
             button2.Text = "Trest";
             button2.UseVisualStyleBackColor = false;
-            button2.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             // 
             // button3
             // 
@@ -366,7 +357,6 @@
             button3.Text = "START";
             button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click;
-            button3.Anchor = AnchorStyles.Bottom;
             // 
             // timer1
             // 
@@ -375,6 +365,7 @@
             // 
             // tableLayoutPanel1
             // 
+            tableLayoutPanel1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             tableLayoutPanel1.ColumnCount = 1;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
@@ -389,8 +380,6 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
             tableLayoutPanel1.Size = new Size(383, 200);
             tableLayoutPanel1.TabIndex = 26;
-            // keep top area responsive horizontally
-            tableLayoutPanel1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             // 
             // tableLayoutPanel2
             // 
@@ -412,6 +401,7 @@
             // 
             // tableLayoutPanel3
             // 
+            tableLayoutPanel3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             tableLayoutPanel3.ColumnCount = 2;
             tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
@@ -426,8 +416,6 @@
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             tableLayoutPanel3.Size = new Size(991, 167);
             tableLayoutPanel3.TabIndex = 27;
-            // allow bottom area to stretch horizontally and stay at bottom
-            tableLayoutPanel3.Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Bottom;
             // 
             // Multimedial_panel_zapas
             // 
