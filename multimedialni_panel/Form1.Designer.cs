@@ -63,6 +63,8 @@
             tableLayoutPanel1 = new TableLayoutPanel();
             tableLayoutPanel2 = new TableLayoutPanel();
             tableLayoutPanel3 = new TableLayoutPanel();
+            helpToolStripMenuItem = new ToolStripMenuItem();
+            oProgramuToolStripMenuItem = new ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)pictureAwayTeam).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureHomeTeam).BeginInit();
             menuStrip1.SuspendLayout();
@@ -234,7 +236,7 @@
             // 
             // menuStrip1
             // 
-            menuStrip1.Items.AddRange(new ToolStripItem[] { možnostiToolStripMenuItem, korekceSkóreToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { možnostiToolStripMenuItem, korekceSkóreToolStripMenuItem, helpToolStripMenuItem, oProgramuToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(1015, 24);
@@ -251,7 +253,7 @@
             // novýZápasToolStripMenuItem1
             // 
             novýZápasToolStripMenuItem1.Name = "novýZápasToolStripMenuItem1";
-            novýZápasToolStripMenuItem1.Size = new Size(134, 22);
+            novýZápasToolStripMenuItem1.Size = new Size(180, 22);
             novýZápasToolStripMenuItem1.Text = "Nový zápas";
             novýZápasToolStripMenuItem1.Click += novýZápasToolStripMenuItem1_Click;
             // 
@@ -259,20 +261,20 @@
             // 
             nastaveníToolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { logaTýmuToolStripMenuItem, jménaTýmůToolStripMenuItem, sportToolStripMenuItem });
             nastaveníToolStripMenuItem1.Name = "nastaveníToolStripMenuItem1";
-            nastaveníToolStripMenuItem1.Size = new Size(134, 22);
+            nastaveníToolStripMenuItem1.Size = new Size(180, 22);
             nastaveníToolStripMenuItem1.Text = "Nastavení";
             // 
             // logaTýmuToolStripMenuItem
             // 
             logaTýmuToolStripMenuItem.Name = "logaTýmuToolStripMenuItem";
-            logaTýmuToolStripMenuItem.Size = new Size(139, 22);
+            logaTýmuToolStripMenuItem.Size = new Size(180, 22);
             logaTýmuToolStripMenuItem.Text = "Loga týmů";
             logaTýmuToolStripMenuItem.Click += logaTýmuToolStripMenuItem_Click;
             // 
             // jménaTýmůToolStripMenuItem
             // 
             jménaTýmůToolStripMenuItem.Name = "jménaTýmůToolStripMenuItem";
-            jménaTýmůToolStripMenuItem.Size = new Size(139, 22);
+            jménaTýmůToolStripMenuItem.Size = new Size(180, 22);
             jménaTýmůToolStripMenuItem.Text = "Jména týmů";
             jménaTýmůToolStripMenuItem.Click += jménaTýmůToolStripMenuItem_Click;
             // 
@@ -280,7 +282,7 @@
             // 
             sportToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { hokejToolStripMenuItem, fotbalToolStripMenuItem });
             sportToolStripMenuItem.Name = "sportToolStripMenuItem";
-            sportToolStripMenuItem.Size = new Size(139, 22);
+            sportToolStripMenuItem.Size = new Size(180, 22);
             sportToolStripMenuItem.Text = "Sport";
             // 
             // hokejToolStripMenuItem
@@ -300,7 +302,7 @@
             // kONECToolStripMenuItem1
             // 
             kONECToolStripMenuItem1.Name = "kONECToolStripMenuItem1";
-            kONECToolStripMenuItem1.Size = new Size(134, 22);
+            kONECToolStripMenuItem1.Size = new Size(180, 22);
             kONECToolStripMenuItem1.Text = "KONEC";
             // 
             // korekceSkóreToolStripMenuItem
@@ -417,6 +419,18 @@
             tableLayoutPanel3.Size = new Size(991, 167);
             tableLayoutPanel3.TabIndex = 27;
             // 
+            // helpToolStripMenuItem
+            // 
+            helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            helpToolStripMenuItem.Size = new Size(44, 20);
+            helpToolStripMenuItem.Text = "Help";
+            // 
+            // oProgramuToolStripMenuItem
+            // 
+            oProgramuToolStripMenuItem.Name = "oProgramuToolStripMenuItem";
+            oProgramuToolStripMenuItem.Size = new Size(84, 20);
+            oProgramuToolStripMenuItem.Text = "O programu";
+            // 
             // Multimedial_panel_zapas
             // 
             AutoScaleDimensions = new SizeF(6F, 15F);
@@ -487,5 +501,7 @@
         private TableLayoutPanel tableLayoutPanel1;
         private TableLayoutPanel tableLayoutPanel2;
         private TableLayoutPanel tableLayoutPanel3;
+        private ToolStripMenuItem helpToolStripMenuItem;
+        private ToolStripMenuItem oProgramuToolStripMenuItem;
     }
 }
