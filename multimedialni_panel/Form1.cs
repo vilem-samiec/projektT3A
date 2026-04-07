@@ -128,14 +128,14 @@ namespace multimedialni_panel
         private void novýZápasToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show(
-        "Opravdu chcete zaèít nový zápas?",
-        "Nový zápas",
-        MessageBoxButtons.YesNo,
-        MessageBoxIcon.Question);
+                "Opravdu chcete zaèít nový zápas?",
+                "Nový zápas",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
 
             if (result == DialogResult.Yes)
             {
-                ResetMatch();
+                this.ResetMatch();
             }
         }
 
@@ -288,6 +288,11 @@ namespace multimedialni_panel
                 pause.Text = "POKRAÈOVAT";
                 pause.BackColor = Color.Green;
             }
+        }
+
+        private void kONECToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

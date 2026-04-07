@@ -58,7 +58,7 @@
             Controls.Add(label1);
             Controls.Add(button1);
             Name = "FormHelp";
-            Text = "FormHelp";
+            Text = "HELP";
             ResumeLayout(false);
             PerformLayout();
         }

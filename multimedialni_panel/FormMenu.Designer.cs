@@ -51,6 +51,7 @@
             // 
             // tableLayoutPanel1
             // 
+            tableLayoutPanel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             tableLayoutPanel1.ColumnCount = 1;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tableLayoutPanel1.Controls.Add(label1, 0, 0);
@@ -65,7 +66,7 @@
             // 
             // button1
             // 
-            button1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            button1.Anchor = AnchorStyles.None;
             button1.BackColor = Color.White;
             button1.Font = new Font("Reem Kufi", 10F, FontStyle.Bold);
             button1.Location = new Point(15, 276);
@@ -74,10 +75,11 @@
             button1.TabIndex = 2;
             button1.Text = "NOVÝ ZÁPAS";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
-            button2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            button2.Anchor = AnchorStyles.None;
             button2.BackColor = Color.White;
             button2.Font = new Font("Reem Kufi", 10F, FontStyle.Bold);
             button2.Location = new Point(15, 360);
@@ -89,7 +91,7 @@
             // 
             // button3
             // 
-            button3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            button3.Anchor = AnchorStyles.None;
             button3.BackColor = Color.White;
             button3.Font = new Font("Reem Kufi", 10F, FontStyle.Bold);
             button3.Location = new Point(611, 360);
@@ -110,7 +112,7 @@
             Controls.Add(button1);
             Controls.Add(tableLayoutPanel1);
             Name = "FormMenu";
-            Text = "FormMenu";
+            Text = "MULTIMEDIÁLNÍ PANEL PRO ZÁPASY";
             WindowState = FormWindowState.Maximized;
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();

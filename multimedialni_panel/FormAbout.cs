@@ -15,9 +15,30 @@ namespace multimedialni_panel
         public FormAbout()
         {
             InitializeComponent();
+            button1.Click += Button1_Click;
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }
