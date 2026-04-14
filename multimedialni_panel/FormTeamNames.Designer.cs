@@ -30,78 +30,125 @@
         {
             label1 = new Label();
             label2 = new Label();
+            btnSave = new Button();
             txtHomeTeam = new TextBox();
             txtAwayTeam = new TextBox();
-            btnSave = new Button();
+            tableLayoutPanel1 = new TableLayoutPanel();
+            tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label1.AutoSize = true;
-            label1.Font = new Font("Swis721 BlkCn BT", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(57, 29);
+            label1.Font = new Font("Reem Kufi", 36F, FontStyle.Bold, GraphicsUnit.Point, 238);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(0, 0);
+            label1.Margin = new Padding(0);
             label1.Name = "label1";
-            label1.Size = new Size(65, 15);
+            label1.Size = new Size(935, 180);
             label1.TabIndex = 0;
-            label1.Text = "Domácí tým";
+            label1.Text = "DOMÁCÍ";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
+            label2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label2.AutoSize = true;
-            label2.Font = new Font("Swis721 BlkCn BT", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(354, 29);
+            label2.Font = new Font("Reem Kufi", 36F, FontStyle.Bold);
+            label2.ForeColor = Color.White;
+            label2.Location = new Point(935, 0);
+            label2.Margin = new Padding(0);
             label2.Name = "label2";
-            label2.Size = new Size(71, 15);
+            label2.Size = new Size(935, 180);
             label2.TabIndex = 1;
-            label2.Text = "Hostující tým";
-            // 
-            // txtHomeTeam
-            // 
-            txtHomeTeam.Location = new Point(12, 47);
-            txtHomeTeam.Name = "txtHomeTeam";
-            txtHomeTeam.Size = new Size(189, 23);
-            txtHomeTeam.TabIndex = 2;
-            // 
-            // txtAwayTeam
-            // 
-            txtAwayTeam.Location = new Point(307, 47);
-            txtAwayTeam.Name = "txtAwayTeam";
-            txtAwayTeam.Size = new Size(189, 23);
-            txtAwayTeam.TabIndex = 3;
+            label2.Text = "HOSTÉ";
+            label2.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // btnSave
             // 
-            btnSave.Location = new Point(154, 327);
+            btnSave.Cursor = Cursors.Hand;
+            btnSave.Font = new Font("Reem Kufi", 28.125F, FontStyle.Bold, GraphicsUnit.Point, 238);
+            btnSave.ForeColor = Color.Black;
+            btnSave.Location = new Point(18, 726);
+            btnSave.Margin = new Padding(6);
             btnSave.Name = "btnSave";
-            btnSave.Size = new Size(254, 67);
+            btnSave.Size = new Size(1864, 217);
             btnSave.TabIndex = 4;
-            btnSave.Text = "Uložit";
+            btnSave.Text = "ULOŽIT";
             btnSave.UseVisualStyleBackColor = true;
             btnSave.Click += btnSave_Click;
             // 
+            // txtHomeTeam
+            // 
+            txtHomeTeam.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            txtHomeTeam.Cursor = Cursors.IBeam;
+            txtHomeTeam.Font = new Font("Reem Kufi Medium", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 238);
+            txtHomeTeam.ForeColor = Color.Black;
+            txtHomeTeam.Location = new Point(6, 186);
+            txtHomeTeam.Margin = new Padding(6);
+            txtHomeTeam.Name = "txtHomeTeam";
+            txtHomeTeam.Size = new Size(923, 79);
+            txtHomeTeam.TabIndex = 2;
+            txtHomeTeam.Text = "Zde napiš název";
+            // 
+            // txtAwayTeam
+            // 
+            txtAwayTeam.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            txtAwayTeam.Cursor = Cursors.IBeam;
+            txtAwayTeam.Font = new Font("Reem Kufi Medium", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 238);
+            txtAwayTeam.ForeColor = Color.Black;
+            txtAwayTeam.Location = new Point(941, 186);
+            txtAwayTeam.Margin = new Padding(6);
+            txtAwayTeam.Name = "txtAwayTeam";
+            txtAwayTeam.Size = new Size(923, 79);
+            txtAwayTeam.TabIndex = 3;
+            txtAwayTeam.Text = "Zde napiš název";
+            // 
+            // tableLayoutPanel1
+            // 
+            tableLayoutPanel1.ColumnCount = 2;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.Controls.Add(label1, 0, 0);
+            tableLayoutPanel1.Controls.Add(label2, 1, 0);
+            tableLayoutPanel1.Controls.Add(txtAwayTeam, 1, 1);
+            tableLayoutPanel1.Controls.Add(txtHomeTeam, 0, 1);
+            tableLayoutPanel1.Location = new Point(12, 12);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 2;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.Size = new Size(1870, 361);
+            tableLayoutPanel1.TabIndex = 5;
+            tableLayoutPanel1.Paint += tableLayoutPanel1_Paint;
+            // 
             // FormTeamNames
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            BackColor = Color.Black;
+            ClientSize = new Size(1894, 1009);
+            Controls.Add(tableLayoutPanel1);
             Controls.Add(btnSave);
-            Controls.Add(txtAwayTeam);
-            Controls.Add(txtHomeTeam);
-            Controls.Add(label2);
-            Controls.Add(label1);
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(6);
             Name = "FormTeamNames";
             Text = "FormTeamNames";
+            WindowState = FormWindowState.Maximized;
             Load += FormTeamNames_Load;
+            tableLayoutPanel1.ResumeLayout(false);
+            tableLayoutPanel1.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
         private Label label1;
         private Label label2;
+        private Button btnSave;
         private TextBox txtHomeTeam;
         private TextBox txtAwayTeam;
-        private Button btnSave;
+        private TableLayoutPanel tableLayoutPanel1;
     }
 }

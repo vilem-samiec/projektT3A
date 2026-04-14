@@ -1,7 +1,7 @@
-using System.Media;
 using System.Windows.Forms;
 using System.IO;
 using System.Drawing;
+using System.Media;
 
 namespace multimedialni_panel
 {
@@ -64,6 +64,8 @@ namespace multimedialni_panel
 
             labelFoulsHome.Text = "0";
             labelFoulsAway.Text = "0";
+            foulHomeSeconds = 0;
+            foulAwaySeconds = 0;
         }
 
         private void button_konec_Click(object sender, EventArgs e)
@@ -301,6 +303,31 @@ namespace multimedialni_panel
         private void button1_Click(object sender, EventArgs e)
         {
             using (var faul = new FormFaul()) { faul.FormBorderStyle = FormBorderStyle.None; faul.StartPosition = FormStartPosition.Manual; var bounds = Screen.FromControl(this).Bounds; faul.Bounds = bounds; faul.TopMost = true; faul.ShowDialog(this); }
-        }    
+        }
+
+        // --- nové pomocné metody pro FormFaul (minuty) ---
+        public int GetFoulHomeMinutes()
+        {
+            return foulHomeSeconds / 60;
+        }
+
+        public int GetFoulAwayMinutes()
+        {
+            return foulAwaySeconds / 60;
+        }
+
+        public void SetFoulHomeMinutes(int minutes)
+        {
+            if (minutes < 0) minutes = 0;
+            foulHomeSeconds = minutes * 60;
+            if (labelFoulsHome != null) labelFoulsHome.Text = minutes.ToString();
+        }
+
+        public void SetFoulAwayMinutes(int minutes)
+        {
+            if (minutes < 0) minutes = 0;
+            foulAwaySeconds = minutes * 60;
+            if (labelFoulsAway != null) labelFoulsAway.Text = minutes.ToString();
+        }
     }
 }

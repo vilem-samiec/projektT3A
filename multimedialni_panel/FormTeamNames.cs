@@ -46,6 +46,13 @@ namespace multimedialni_panel
             File.WriteAllLines(path, teams);
 
             MessageBox.Show("Jména týmů byla uložena.");
+            this.Close();
+
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

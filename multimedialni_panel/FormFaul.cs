@@ -19,7 +19,7 @@ namespace multimedialni_panel
             numericUpDown2.Maximum = 999;
         }
 
-        private void FormFaul_Load(object? sender, EventArgs e)
+        private void FormFaul_Load(object sender, EventArgs e)
         {
             if (this.Owner is Multimedial_panel_zapas main)
             {
@@ -28,19 +28,19 @@ namespace multimedialni_panel
             }
         }
 
-        private void NumericUpDown1_ValueChanged(object? sender, EventArgs e)
+        private void NumericUpDown1_ValueChanged(object sender, EventArgs e)
         {
             if (this.Owner is Multimedial_panel_zapas main)
                 main.SetFoulHomeMinutes((int)numericUpDown1.Value);
         }
 
-        private void NumericUpDown2_ValueChanged(object? sender, EventArgs e)
+        private void NumericUpDown2_ValueChanged(object sender, EventArgs e)
         {
             if (this.Owner is Multimedial_panel_zapas main)
                 main.SetFoulAwayMinutes((int)numericUpDown2.Value);
         }
 
-        private void Button1_Click(object? sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             if (this.Owner is Multimedial_panel_zapas main)
             {
