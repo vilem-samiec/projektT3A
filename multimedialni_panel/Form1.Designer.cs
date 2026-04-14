@@ -28,7 +28,6 @@
             pictureAwayTeam = new PictureBox();
             pictureHomeTeam = new PictureBox();
             button_goal_horn_h = new Button();
-            pause = new Button();
             button_goal_horn_d = new Button();
             lomeno = new Label();
             labelPeriod = new Label();
@@ -48,7 +47,6 @@
             helpToolStripMenuItem = new ToolStripMenuItem();
             oProgramuToolStripMenuItem = new ToolStripMenuItem();
             button1 = new Button();
-            button2 = new Button();
             button3 = new Button();
             timer1 = new System.Windows.Forms.Timer(components);
             tableLayoutPanel1 = new TableLayoutPanel();
@@ -61,9 +59,6 @@
             tableLayoutPanel2.SuspendLayout();
             tableLayoutPanel3.SuspendLayout();
             SuspendLayout();
-
-            Load += Multimedial_panel_zapas_Load;
-
             // 
             // labelScoreHome
             // 
@@ -73,7 +68,7 @@
             labelScoreHome.ForeColor = Color.White;
             labelScoreHome.Location = new Point(3, 0);
             labelScoreHome.Name = "labelScoreHome";
-            labelScoreHome.Size = new Size(166, 91);
+            labelScoreHome.Size = new Size(573, 91);
             labelScoreHome.TabIndex = 5;
             labelScoreHome.Text = "0";
             labelScoreHome.TextAlign = ContentAlignment.MiddleCenter;
@@ -84,9 +79,9 @@
             labelScoreAway.Dock = DockStyle.Fill;
             labelScoreAway.Font = new Font("Reem Kufi", 36F, FontStyle.Bold);
             labelScoreAway.ForeColor = Color.White;
-            labelScoreAway.Location = new Point(213, 0);
+            labelScoreAway.Location = new Point(710, 0);
             labelScoreAway.Name = "labelScoreAway";
-            labelScoreAway.Size = new Size(167, 91);
+            labelScoreAway.Size = new Size(575, 91);
             labelScoreAway.TabIndex = 6;
             labelScoreAway.Text = "0";
             labelScoreAway.TextAlign = ContentAlignment.MiddleCenter;
@@ -99,7 +94,7 @@
             labelHomeTeam.ForeColor = Color.White;
             labelHomeTeam.Location = new Point(3, 0);
             labelHomeTeam.Name = "labelHomeTeam";
-            labelHomeTeam.Size = new Size(489, 83);
+            labelHomeTeam.Size = new Size(942, 83);
             labelHomeTeam.TabIndex = 8;
             labelHomeTeam.Text = "NÁZEV TÝMU";
             labelHomeTeam.TextAlign = ContentAlignment.MiddleCenter;
@@ -111,9 +106,9 @@
             labelAwayTeam.Dock = DockStyle.Fill;
             labelAwayTeam.Font = new Font("Reem Kufi", 36F, FontStyle.Bold);
             labelAwayTeam.ForeColor = Color.White;
-            labelAwayTeam.Location = new Point(498, 0);
+            labelAwayTeam.Location = new Point(951, 0);
             labelAwayTeam.Name = "labelAwayTeam";
-            labelAwayTeam.Size = new Size(490, 83);
+            labelAwayTeam.Size = new Size(942, 83);
             labelAwayTeam.TabIndex = 9;
             labelAwayTeam.Text = "NÁZEV TÝMU";
             labelAwayTeam.TextAlign = ContentAlignment.MiddleCenter;
@@ -125,7 +120,7 @@
             labelTime.ForeColor = Color.White;
             labelTime.Location = new Point(3, 0);
             labelTime.Name = "labelTime";
-            labelTime.Size = new Size(377, 89);
+            labelTime.Size = new Size(1282, 89);
             labelTime.TabIndex = 10;
             labelTime.Text = "ČAS";
             labelTime.TextAlign = ContentAlignment.MiddleCenter;
@@ -138,7 +133,7 @@
             labelFoulsHome.ForeColor = Color.White;
             labelFoulsHome.Location = new Point(3, 83);
             labelFoulsHome.Name = "labelFoulsHome";
-            labelFoulsHome.Size = new Size(489, 84);
+            labelFoulsHome.Size = new Size(942, 84);
             labelFoulsHome.TabIndex = 11;
             labelFoulsHome.Text = "TREST";
             labelFoulsHome.TextAlign = ContentAlignment.MiddleCenter;
@@ -149,9 +144,9 @@
             labelFoulsAway.Dock = DockStyle.Fill;
             labelFoulsAway.Font = new Font("Reem Kufi", 36F, FontStyle.Bold);
             labelFoulsAway.ForeColor = Color.White;
-            labelFoulsAway.Location = new Point(498, 83);
+            labelFoulsAway.Location = new Point(951, 83);
             labelFoulsAway.Name = "labelFoulsAway";
-            labelFoulsAway.Size = new Size(490, 84);
+            labelFoulsAway.Size = new Size(942, 84);
             labelFoulsAway.TabIndex = 12;
             labelFoulsAway.Text = "TREST";
             labelFoulsAway.TextAlign = ContentAlignment.MiddleCenter;
@@ -159,7 +154,7 @@
             // pictureAwayTeam
             // 
             pictureAwayTeam.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            pictureAwayTeam.Location = new Point(720, 96);
+            pictureAwayTeam.Location = new Point(1625, 96);
             pictureAwayTeam.Name = "pictureAwayTeam";
             pictureAwayTeam.Size = new Size(200, 200);
             pictureAwayTeam.SizeMode = PictureBoxSizeMode.Zoom;
@@ -179,37 +174,25 @@
             // 
             button_goal_horn_h.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             button_goal_horn_h.BackColor = Color.White;
-            button_goal_horn_h.Font = new Font("Reem Kufi", 10F, FontStyle.Bold);
-            button_goal_horn_h.Location = new Point(686, 502);
+            button_goal_horn_h.Cursor = Cursors.Hand;
+            button_goal_horn_h.Font = new Font("Reem Kufi", 36F, FontStyle.Bold);
+            button_goal_horn_h.Location = new Point(1028, 529);
             button_goal_horn_h.Name = "button_goal_horn_h";
-            button_goal_horn_h.Size = new Size(152, 64);
+            button_goal_horn_h.Size = new Size(880, 213);
             button_goal_horn_h.TabIndex = 17;
             button_goal_horn_h.Text = "GOAL";
             button_goal_horn_h.UseVisualStyleBackColor = false;
             button_goal_horn_h.Click += button_goal_horn_h_Click;
-            // soubor: multimedialni_panel\Form1.Designer.cs
-            // (nahraďte sekci inicializace pause a button3 těmito řádky)
-
-            // pause
-            pause.Anchor = AnchorStyles.Bottom;
-            pause.BackColor = Color.Red;
-            pause.Font = new Font("Reem Kufi", 10F, FontStyle.Bold);
-            pause.Location = new Point(514, 573);
-            pause.Name = "pause";
-            pause.Size = new Size(150, 64);
-            pause.TabIndex = 19;
-            pause.Text = "PAUZA";
-            pause.UseVisualStyleBackColor = false;
-            pause.Click += pause_Click;
             // 
             // button_goal_horn_d
             // 
             button_goal_horn_d.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             button_goal_horn_d.BackColor = Color.White;
-            button_goal_horn_d.Font = new Font("Reem Kufi", 10F, FontStyle.Bold);
-            button_goal_horn_d.Location = new Point(189, 502);
+            button_goal_horn_d.Cursor = Cursors.Hand;
+            button_goal_horn_d.Font = new Font("Reem Kufi", 36F, FontStyle.Bold);
+            button_goal_horn_d.Location = new Point(12, 529);
             button_goal_horn_d.Name = "button_goal_horn_d";
-            button_goal_horn_d.Size = new Size(152, 64);
+            button_goal_horn_d.Size = new Size(882, 213);
             button_goal_horn_d.TabIndex = 16;
             button_goal_horn_d.Text = "GOAL";
             button_goal_horn_d.UseVisualStyleBackColor = false;
@@ -221,9 +204,9 @@
             lomeno.Dock = DockStyle.Fill;
             lomeno.Font = new Font("Swis721 BlkCn BT", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lomeno.ForeColor = Color.White;
-            lomeno.Location = new Point(175, 0);
+            lomeno.Location = new Point(582, 0);
             lomeno.Name = "lomeno";
-            lomeno.Size = new Size(32, 91);
+            lomeno.Size = new Size(122, 91);
             lomeno.TabIndex = 20;
             lomeno.Text = ":";
             lomeno.TextAlign = ContentAlignment.MiddleCenter;
@@ -236,7 +219,7 @@
             labelPeriod.ForeColor = Color.White;
             labelPeriod.Location = new Point(3, 89);
             labelPeriod.Name = "labelPeriod";
-            labelPeriod.Size = new Size(377, 89);
+            labelPeriod.Size = new Size(1282, 89);
             labelPeriod.TabIndex = 21;
             labelPeriod.Text = "PERIODA";
             labelPeriod.TextAlign = ContentAlignment.MiddleCenter;
@@ -246,7 +229,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { možnostiToolStripMenuItem, korekceSkóreToolStripMenuItem, helpToolStripMenuItem, oProgramuToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(1015, 24);
+            menuStrip1.Size = new Size(1920, 24);
             menuStrip1.TabIndex = 22;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -260,7 +243,7 @@
             // novýZápasToolStripMenuItem1
             // 
             novýZápasToolStripMenuItem1.Name = "novýZápasToolStripMenuItem1";
-            novýZápasToolStripMenuItem1.Size = new Size(180, 22);
+            novýZápasToolStripMenuItem1.Size = new Size(134, 22);
             novýZápasToolStripMenuItem1.Text = "Nový zápas";
             novýZápasToolStripMenuItem1.Click += novýZápasToolStripMenuItem1_Click;
             // 
@@ -268,7 +251,7 @@
             // 
             nastaveníToolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { logaTýmuToolStripMenuItem, jménaTýmůToolStripMenuItem, sportToolStripMenuItem });
             nastaveníToolStripMenuItem1.Name = "nastaveníToolStripMenuItem1";
-            nastaveníToolStripMenuItem1.Size = new Size(180, 22);
+            nastaveníToolStripMenuItem1.Size = new Size(134, 22);
             nastaveníToolStripMenuItem1.Text = "Nastavení";
             // 
             // logaTýmuToolStripMenuItem
@@ -309,7 +292,7 @@
             // kONECToolStripMenuItem1
             // 
             kONECToolStripMenuItem1.Name = "kONECToolStripMenuItem1";
-            kONECToolStripMenuItem1.Size = new Size(180, 22);
+            kONECToolStripMenuItem1.Size = new Size(134, 22);
             kONECToolStripMenuItem1.Text = "KONEC";
             kONECToolStripMenuItem1.Click += kONECToolStripMenuItem1_Click;
             // 
@@ -339,43 +322,38 @@
             helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             helpToolStripMenuItem.Size = new Size(44, 20);
             helpToolStripMenuItem.Text = "Help";
+            helpToolStripMenuItem.Click += helpToolStripMenuItem_Click;
             // 
             // oProgramuToolStripMenuItem
             // 
             oProgramuToolStripMenuItem.Name = "oProgramuToolStripMenuItem";
             oProgramuToolStripMenuItem.Size = new Size(84, 20);
             oProgramuToolStripMenuItem.Text = "O programu";
+            oProgramuToolStripMenuItem.Click += oProgramuToolStripMenuItem_Click;
             // 
             // button1
             // 
             button1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             button1.BackColor = Color.White;
+            button1.Cursor = Cursors.Hand;
             button1.Font = new Font("Reem Kufi", 10F, FontStyle.Bold);
-            button1.Location = new Point(12, 574);
+            button1.Location = new Point(12, 748);
             button1.Name = "button1";
-            button1.Size = new Size(150, 64);
+            button1.Size = new Size(1896, 64);
             button1.TabIndex = 23;
             button1.Text = "TREST";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
-            // button2
-            // 
-            button2.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            button2.BackColor = Color.White;
-            button2.Font = new Font("Reem Kufi", 10F, FontStyle.Bold);
-            button2.Location = new Point(853, 574);
-            button2.Name = "button2";
-            button2.Size = new Size(150, 64);
-            button2.TabIndex = 24;
-            button2.Text = "TREST";
-            button2.UseVisualStyleBackColor = false;
             // button3
+            // 
             button3.Anchor = AnchorStyles.Bottom;
             button3.BackColor = Color.Green;
-            button3.Font = new Font("Reem Kufi", 10F, FontStyle.Bold);
-            button3.Location = new Point(358, 573);
+            button3.Cursor = Cursors.Hand;
+            button3.Font = new Font("Reem Kufi", 26.25F, FontStyle.Bold);
+            button3.Location = new Point(771, 884);
             button3.Name = "button3";
-            button3.Size = new Size(150, 64);
+            button3.Size = new Size(383, 165);
             button3.TabIndex = 25;
             button3.Text = "START";
             button3.UseVisualStyleBackColor = false;
@@ -401,7 +379,7 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
-            tableLayoutPanel1.Size = new Size(383, 269);
+            tableLayoutPanel1.Size = new Size(1288, 269);
             tableLayoutPanel1.TabIndex = 26;
             // 
             // tableLayoutPanel2
@@ -419,7 +397,7 @@
             tableLayoutPanel2.Name = "tableLayoutPanel2";
             tableLayoutPanel2.RowCount = 1;
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel2.Size = new Size(383, 91);
+            tableLayoutPanel2.Size = new Size(1288, 91);
             tableLayoutPanel2.TabIndex = 22;
             // 
             // tableLayoutPanel3
@@ -437,7 +415,7 @@
             tableLayoutPanel3.RowCount = 2;
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel3.Size = new Size(991, 167);
+            tableLayoutPanel3.Size = new Size(1896, 167);
             tableLayoutPanel3.TabIndex = 27;
             // 
             // Multimedial_panel_zapas
@@ -445,19 +423,18 @@
             AutoScaleDimensions = new SizeF(6F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
-            ClientSize = new Size(1015, 650);
+            ClientSize = new Size(1920, 1061);
             Controls.Add(tableLayoutPanel3);
             Controls.Add(tableLayoutPanel1);
             Controls.Add(button3);
-            Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(menuStrip1);
-            Controls.Add(pause);
             Controls.Add(button_goal_horn_h);
             Controls.Add(button_goal_horn_d);
             Controls.Add(pictureHomeTeam);
             Controls.Add(pictureAwayTeam);
             Font = new Font("Swis721 BlkCn BT", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            FormBorderStyle = FormBorderStyle.None;
             MainMenuStrip = menuStrip1;
             Name = "Multimedial_panel_zapas";
             Text = "MULTIMEDIÁLNÍ PANEL PRO ZÁPASY";
@@ -479,7 +456,7 @@
         // soubor: multimedialni_panel\Form1.cs
         // (nahraďte nebo doplňte tyto metody / části)
 
-        
+
         #endregion
         private Label labelScoreHome;
         private Label labelScoreAway;
@@ -491,7 +468,6 @@
         private PictureBox pictureAwayTeam;
         private PictureBox pictureHomeTeam;
         private Button button_goal_horn_h;
-        private Button pause;
         private Button button_goal_horn_d;
         private Label lomeno;
         private Label labelPeriod;
@@ -503,7 +479,6 @@
         private ToolStripMenuItem logaTýmuToolStripMenuItem;
         private ToolStripMenuItem jménaTýmůToolStripMenuItem;
         private Button button1;
-        private Button button2;
         private ToolStripMenuItem korekceSkóreToolStripMenuItem;
         private ToolStripMenuItem odebratDomácíToolStripMenuItem;
         private ToolStripMenuItem odebratHostéToolStripMenuItem;

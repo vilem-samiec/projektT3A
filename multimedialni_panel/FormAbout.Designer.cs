@@ -46,6 +46,7 @@
             // button1
             // 
             button1.BackColor = Color.White;
+            button1.Cursor = Cursors.Hand;
             button1.Font = new Font("Reem Kufi", 10F, FontStyle.Bold);
             button1.Location = new Point(3, 3);
             button1.Name = "button1";
@@ -53,6 +54,7 @@
             button1.TabIndex = 1;
             button1.Text = "<-";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click_1;
             // 
             // label1
             // 
@@ -212,6 +214,7 @@
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "FormAbout";
             Text = "O PROGRAMU";
             WindowState = FormWindowState.Maximized;

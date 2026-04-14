@@ -213,7 +213,6 @@ namespace multimedialni_panel
                         // Update UI to reflect finished match
                         button3.Text = "START";
                         button3.BackColor = Color.Green;
-                        pause.Enabled = false;
                     }
                     return;
                 }
@@ -253,18 +252,12 @@ namespace multimedialni_panel
                 timer1.Start();
                 button3.Text = "STOP";
                 button3.BackColor = Color.Red;
-                pause.Enabled = true;
-                pause.Text = "PAUZA";
-                pause.BackColor = Color.Red;
             }
             else
             {
                 timer1.Stop();
                 button3.Text = "START";
                 button3.BackColor = Color.Green;
-                pause.Enabled = false;
-                pause.Text = "PAUZA";
-                pause.BackColor = Color.Aqua;
             }
         }
 
@@ -275,8 +268,6 @@ namespace multimedialni_panel
             {
                 // resume
                 timer1.Start();
-                pause.Text = "PAUZA";
-                pause.BackColor = Color.Red;
                 // ensure start button shows stop
                 button3.Text = "STOP";
                 button3.BackColor = Color.Red;
@@ -285,8 +276,6 @@ namespace multimedialni_panel
             {
                 // pause
                 timer1.Stop();
-                pause.Text = "POKRAÈOVAT";
-                pause.BackColor = Color.Green;
             }
         }
 
@@ -294,5 +283,24 @@ namespace multimedialni_panel
         {
             Application.Exit();
         }
+
+        private int foulHomeSeconds = 0;
+        private int foulAwaySeconds = 0;
+
+        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (var help = new FormHelp()) { help.FormBorderStyle = FormBorderStyle.None; help.StartPosition = FormStartPosition.Manual; var bounds = Screen.FromControl(this).Bounds; help.Bounds = bounds; help.TopMost = true; help.ShowDialog(this); }
+
+        }
+
+        private void oProgramuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (var about = new FormAbout()) { about.FormBorderStyle = FormBorderStyle.None; about.StartPosition = FormStartPosition.Manual; var bounds = Screen.FromControl(this).Bounds; about.Bounds = bounds; about.TopMost = true; about.ShowDialog(this); }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            using (var faul = new FormFaul()) { faul.FormBorderStyle = FormBorderStyle.None; faul.StartPosition = FormStartPosition.Manual; var bounds = Screen.FromControl(this).Bounds; faul.Bounds = bounds; faul.TopMost = true; faul.ShowDialog(this); }
+        }    
     }
 }
