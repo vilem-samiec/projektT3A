@@ -46,9 +46,16 @@
             odebratHostéToolStripMenuItem = new ToolStripMenuItem();
             helpToolStripMenuItem = new ToolStripMenuItem();
             oProgramuToolStripMenuItem = new ToolStripMenuItem();
+            korekcePeriodyToolStripMenuItem = new ToolStripMenuItem();
+            nastavitVyššíPerioduToolStripMenuItem = new ToolStripMenuItem();
+            nastavitNižsíPerioduToolStripMenuItem = new ToolStripMenuItem();
+            přidatPerioduToolStripMenuItem = new ToolStripMenuItem();
+            odebratPerioduToolStripMenuItem = new ToolStripMenuItem();
             button1 = new Button();
             button3 = new Button();
             timer1 = new System.Windows.Forms.Timer(components);
+            timer2 = new System.Windows.Forms.Timer(components);
+            timer3 = new System.Windows.Forms.Timer(components);
             tableLayoutPanel1 = new TableLayoutPanel();
             tableLayoutPanel2 = new TableLayoutPanel();
             tableLayoutPanel3 = new TableLayoutPanel();
@@ -68,7 +75,7 @@
             labelScoreHome.ForeColor = Color.White;
             labelScoreHome.Location = new Point(3, 0);
             labelScoreHome.Name = "labelScoreHome";
-            labelScoreHome.Size = new Size(573, 91);
+            labelScoreHome.Size = new Size(882, 136);
             labelScoreHome.TabIndex = 5;
             labelScoreHome.Text = "0";
             labelScoreHome.TextAlign = ContentAlignment.MiddleCenter;
@@ -79,9 +86,9 @@
             labelScoreAway.Dock = DockStyle.Fill;
             labelScoreAway.Font = new Font("Reem Kufi", 36F, FontStyle.Bold);
             labelScoreAway.ForeColor = Color.White;
-            labelScoreAway.Location = new Point(710, 0);
+            labelScoreAway.Location = new Point(1088, 0);
             labelScoreAway.Name = "labelScoreAway";
-            labelScoreAway.Size = new Size(575, 91);
+            labelScoreAway.Size = new Size(883, 136);
             labelScoreAway.TabIndex = 6;
             labelScoreAway.Text = "0";
             labelScoreAway.TextAlign = ContentAlignment.MiddleCenter;
@@ -94,7 +101,7 @@
             labelHomeTeam.ForeColor = Color.White;
             labelHomeTeam.Location = new Point(3, 0);
             labelHomeTeam.Name = "labelHomeTeam";
-            labelHomeTeam.Size = new Size(942, 83);
+            labelHomeTeam.Size = new Size(1285, 151);
             labelHomeTeam.TabIndex = 8;
             labelHomeTeam.Text = "NÁZEV TÝMU";
             labelHomeTeam.TextAlign = ContentAlignment.MiddleCenter;
@@ -106,9 +113,9 @@
             labelAwayTeam.Dock = DockStyle.Fill;
             labelAwayTeam.Font = new Font("Reem Kufi", 36F, FontStyle.Bold);
             labelAwayTeam.ForeColor = Color.White;
-            labelAwayTeam.Location = new Point(951, 0);
+            labelAwayTeam.Location = new Point(1294, 0);
             labelAwayTeam.Name = "labelAwayTeam";
-            labelAwayTeam.Size = new Size(942, 83);
+            labelAwayTeam.Size = new Size(1285, 151);
             labelAwayTeam.TabIndex = 9;
             labelAwayTeam.Text = "NÁZEV TÝMU";
             labelAwayTeam.TextAlign = ContentAlignment.MiddleCenter;
@@ -120,7 +127,7 @@
             labelTime.ForeColor = Color.White;
             labelTime.Location = new Point(3, 0);
             labelTime.Name = "labelTime";
-            labelTime.Size = new Size(1282, 89);
+            labelTime.Size = new Size(1968, 134);
             labelTime.TabIndex = 10;
             labelTime.Text = "ČAS";
             labelTime.TextAlign = ContentAlignment.MiddleCenter;
@@ -131,9 +138,9 @@
             labelFoulsHome.Dock = DockStyle.Fill;
             labelFoulsHome.Font = new Font("Reem Kufi", 36F, FontStyle.Bold);
             labelFoulsHome.ForeColor = Color.White;
-            labelFoulsHome.Location = new Point(3, 83);
+            labelFoulsHome.Location = new Point(3, 151);
             labelFoulsHome.Name = "labelFoulsHome";
-            labelFoulsHome.Size = new Size(942, 84);
+            labelFoulsHome.Size = new Size(1285, 151);
             labelFoulsHome.TabIndex = 11;
             labelFoulsHome.Text = "TREST";
             labelFoulsHome.TextAlign = ContentAlignment.MiddleCenter;
@@ -144,9 +151,9 @@
             labelFoulsAway.Dock = DockStyle.Fill;
             labelFoulsAway.Font = new Font("Reem Kufi", 36F, FontStyle.Bold);
             labelFoulsAway.ForeColor = Color.White;
-            labelFoulsAway.Location = new Point(951, 83);
+            labelFoulsAway.Location = new Point(1294, 151);
             labelFoulsAway.Name = "labelFoulsAway";
-            labelFoulsAway.Size = new Size(942, 84);
+            labelFoulsAway.Size = new Size(1285, 151);
             labelFoulsAway.TabIndex = 12;
             labelFoulsAway.Text = "TREST";
             labelFoulsAway.TextAlign = ContentAlignment.MiddleCenter;
@@ -154,7 +161,7 @@
             // pictureAwayTeam
             // 
             pictureAwayTeam.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            pictureAwayTeam.Location = new Point(1625, 96);
+            pictureAwayTeam.Location = new Point(2311, 96);
             pictureAwayTeam.Name = "pictureAwayTeam";
             pictureAwayTeam.Size = new Size(200, 200);
             pictureAwayTeam.SizeMode = PictureBoxSizeMode.Zoom;
@@ -176,7 +183,7 @@
             button_goal_horn_h.BackColor = Color.White;
             button_goal_horn_h.Cursor = Cursors.Hand;
             button_goal_horn_h.Font = new Font("Reem Kufi", 36F, FontStyle.Bold);
-            button_goal_horn_h.Location = new Point(1028, 529);
+            button_goal_horn_h.Location = new Point(1714, 776);
             button_goal_horn_h.Name = "button_goal_horn_h";
             button_goal_horn_h.Size = new Size(880, 213);
             button_goal_horn_h.TabIndex = 17;
@@ -190,7 +197,7 @@
             button_goal_horn_d.BackColor = Color.White;
             button_goal_horn_d.Cursor = Cursors.Hand;
             button_goal_horn_d.Font = new Font("Reem Kufi", 36F, FontStyle.Bold);
-            button_goal_horn_d.Location = new Point(12, 529);
+            button_goal_horn_d.Location = new Point(12, 776);
             button_goal_horn_d.Name = "button_goal_horn_d";
             button_goal_horn_d.Size = new Size(882, 213);
             button_goal_horn_d.TabIndex = 16;
@@ -202,11 +209,11 @@
             // 
             lomeno.AutoSize = true;
             lomeno.Dock = DockStyle.Fill;
-            lomeno.Font = new Font("Swis721 BlkCn BT", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lomeno.Font = new Font("Microsoft Sans Serif", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lomeno.ForeColor = Color.White;
-            lomeno.Location = new Point(582, 0);
+            lomeno.Location = new Point(891, 0);
             lomeno.Name = "lomeno";
-            lomeno.Size = new Size(122, 91);
+            lomeno.Size = new Size(191, 136);
             lomeno.TabIndex = 20;
             lomeno.Text = ":";
             lomeno.TextAlign = ContentAlignment.MiddleCenter;
@@ -217,19 +224,20 @@
             labelPeriod.Dock = DockStyle.Fill;
             labelPeriod.Font = new Font("Reem Kufi", 36F, FontStyle.Bold);
             labelPeriod.ForeColor = Color.White;
-            labelPeriod.Location = new Point(3, 89);
+            labelPeriod.Location = new Point(3, 134);
             labelPeriod.Name = "labelPeriod";
-            labelPeriod.Size = new Size(1282, 89);
+            labelPeriod.Size = new Size(1968, 134);
             labelPeriod.TabIndex = 21;
             labelPeriod.Text = "PERIODA";
             labelPeriod.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // menuStrip1
             // 
-            menuStrip1.Items.AddRange(new ToolStripItem[] { možnostiToolStripMenuItem, korekceSkóreToolStripMenuItem, helpToolStripMenuItem, oProgramuToolStripMenuItem });
+            menuStrip1.ImageScalingSize = new Size(32, 32);
+            menuStrip1.Items.AddRange(new ToolStripItem[] { možnostiToolStripMenuItem, korekceSkóreToolStripMenuItem, helpToolStripMenuItem, oProgramuToolStripMenuItem, korekcePeriodyToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(1920, 24);
+            menuStrip1.Size = new Size(2606, 42);
             menuStrip1.TabIndex = 22;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -237,13 +245,13 @@
             // 
             možnostiToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { novýZápasToolStripMenuItem1, nastaveníToolStripMenuItem1, kONECToolStripMenuItem1 });
             možnostiToolStripMenuItem.Name = "možnostiToolStripMenuItem";
-            možnostiToolStripMenuItem.Size = new Size(68, 20);
+            možnostiToolStripMenuItem.Size = new Size(133, 38);
             možnostiToolStripMenuItem.Text = "Možnosti";
             // 
             // novýZápasToolStripMenuItem1
             // 
             novýZápasToolStripMenuItem1.Name = "novýZápasToolStripMenuItem1";
-            novýZápasToolStripMenuItem1.Size = new Size(134, 22);
+            novýZápasToolStripMenuItem1.Size = new Size(269, 44);
             novýZápasToolStripMenuItem1.Text = "Nový zápas";
             novýZápasToolStripMenuItem1.Click += novýZápasToolStripMenuItem1_Click;
             // 
@@ -251,20 +259,20 @@
             // 
             nastaveníToolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { logaTýmuToolStripMenuItem, jménaTýmůToolStripMenuItem, sportToolStripMenuItem });
             nastaveníToolStripMenuItem1.Name = "nastaveníToolStripMenuItem1";
-            nastaveníToolStripMenuItem1.Size = new Size(134, 22);
+            nastaveníToolStripMenuItem1.Size = new Size(269, 44);
             nastaveníToolStripMenuItem1.Text = "Nastavení";
             // 
             // logaTýmuToolStripMenuItem
             // 
             logaTýmuToolStripMenuItem.Name = "logaTýmuToolStripMenuItem";
-            logaTýmuToolStripMenuItem.Size = new Size(139, 22);
+            logaTýmuToolStripMenuItem.Size = new Size(278, 44);
             logaTýmuToolStripMenuItem.Text = "Loga týmů";
             logaTýmuToolStripMenuItem.Click += logaTýmuToolStripMenuItem_Click;
             // 
             // jménaTýmůToolStripMenuItem
             // 
             jménaTýmůToolStripMenuItem.Name = "jménaTýmůToolStripMenuItem";
-            jménaTýmůToolStripMenuItem.Size = new Size(139, 22);
+            jménaTýmůToolStripMenuItem.Size = new Size(278, 44);
             jménaTýmůToolStripMenuItem.Text = "Jména týmů";
             jménaTýmůToolStripMenuItem.Click += jménaTýmůToolStripMenuItem_Click;
             // 
@@ -272,27 +280,27 @@
             // 
             sportToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { hokejToolStripMenuItem, fotbalToolStripMenuItem });
             sportToolStripMenuItem.Name = "sportToolStripMenuItem";
-            sportToolStripMenuItem.Size = new Size(139, 22);
+            sportToolStripMenuItem.Size = new Size(278, 44);
             sportToolStripMenuItem.Text = "Sport";
             // 
             // hokejToolStripMenuItem
             // 
             hokejToolStripMenuItem.Name = "hokejToolStripMenuItem";
-            hokejToolStripMenuItem.Size = new Size(107, 22);
+            hokejToolStripMenuItem.Size = new Size(213, 44);
             hokejToolStripMenuItem.Text = "Hokej";
             hokejToolStripMenuItem.Click += hokejToolStripMenuItem_Click;
             // 
             // fotbalToolStripMenuItem
             // 
             fotbalToolStripMenuItem.Name = "fotbalToolStripMenuItem";
-            fotbalToolStripMenuItem.Size = new Size(107, 22);
+            fotbalToolStripMenuItem.Size = new Size(213, 44);
             fotbalToolStripMenuItem.Text = "Fotbal";
             fotbalToolStripMenuItem.Click += fotbalToolStripMenuItem_Click;
             // 
             // kONECToolStripMenuItem1
             // 
             kONECToolStripMenuItem1.Name = "kONECToolStripMenuItem1";
-            kONECToolStripMenuItem1.Size = new Size(134, 22);
+            kONECToolStripMenuItem1.Size = new Size(269, 44);
             kONECToolStripMenuItem1.Text = "KONEC";
             kONECToolStripMenuItem1.Click += kONECToolStripMenuItem1_Click;
             // 
@@ -300,46 +308,81 @@
             // 
             korekceSkóreToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { odebratDomácíToolStripMenuItem, odebratHostéToolStripMenuItem });
             korekceSkóreToolStripMenuItem.Name = "korekceSkóreToolStripMenuItem";
-            korekceSkóreToolStripMenuItem.Size = new Size(92, 20);
+            korekceSkóreToolStripMenuItem.Size = new Size(182, 38);
             korekceSkóreToolStripMenuItem.Text = "Korekce skóre";
             // 
             // odebratDomácíToolStripMenuItem
             // 
             odebratDomácíToolStripMenuItem.Name = "odebratDomácíToolStripMenuItem";
-            odebratDomácíToolStripMenuItem.Size = new Size(185, 22);
+            odebratDomácíToolStripMenuItem.Size = new Size(371, 44);
             odebratDomácíToolStripMenuItem.Text = "Odebrat Bod Domácí";
             odebratDomácíToolStripMenuItem.Click += odebratDomácíToolStripMenuItem_Click;
             // 
             // odebratHostéToolStripMenuItem
             // 
             odebratHostéToolStripMenuItem.Name = "odebratHostéToolStripMenuItem";
-            odebratHostéToolStripMenuItem.Size = new Size(185, 22);
+            odebratHostéToolStripMenuItem.Size = new Size(371, 44);
             odebratHostéToolStripMenuItem.Text = "Odebrat Bod Hosté";
             odebratHostéToolStripMenuItem.Click += odebratHostéToolStripMenuItem_Click;
             // 
             // helpToolStripMenuItem
             // 
             helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            helpToolStripMenuItem.Size = new Size(44, 20);
+            helpToolStripMenuItem.Size = new Size(84, 38);
             helpToolStripMenuItem.Text = "Help";
             helpToolStripMenuItem.Click += helpToolStripMenuItem_Click;
             // 
             // oProgramuToolStripMenuItem
             // 
             oProgramuToolStripMenuItem.Name = "oProgramuToolStripMenuItem";
-            oProgramuToolStripMenuItem.Size = new Size(84, 20);
+            oProgramuToolStripMenuItem.Size = new Size(164, 38);
             oProgramuToolStripMenuItem.Text = "O programu";
             oProgramuToolStripMenuItem.Click += oProgramuToolStripMenuItem_Click;
             // 
+            // korekcePeriodyToolStripMenuItem
+            // 
+            korekcePeriodyToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { nastavitVyššíPerioduToolStripMenuItem, nastavitNižsíPerioduToolStripMenuItem, přidatPerioduToolStripMenuItem, odebratPerioduToolStripMenuItem });
+            korekcePeriodyToolStripMenuItem.Name = "korekcePeriodyToolStripMenuItem";
+            korekcePeriodyToolStripMenuItem.Size = new Size(206, 38);
+            korekcePeriodyToolStripMenuItem.Text = "Korekce periody";
+            // 
+            // nastavitVyššíPerioduToolStripMenuItem
+            // 
+            nastavitVyššíPerioduToolStripMenuItem.Name = "nastavitVyššíPerioduToolStripMenuItem";
+            nastavitVyššíPerioduToolStripMenuItem.Size = new Size(380, 44);
+            nastavitVyššíPerioduToolStripMenuItem.Text = "Nastavit vyšší periodu";
+            nastavitVyššíPerioduToolStripMenuItem.Click += nastavitVyššíPerioduToolStripMenuItem_Click;
+            // 
+            // nastavitNižsíPerioduToolStripMenuItem
+            // 
+            nastavitNižsíPerioduToolStripMenuItem.Name = "nastavitNižsíPerioduToolStripMenuItem";
+            nastavitNižsíPerioduToolStripMenuItem.Size = new Size(380, 44);
+            nastavitNižsíPerioduToolStripMenuItem.Text = "Nastavit nižsí periodu";
+            nastavitNižsíPerioduToolStripMenuItem.Click += nastavitNižsíPerioduToolStripMenuItem_Click;
+            // 
+            // přidatPerioduToolStripMenuItem
+            // 
+            přidatPerioduToolStripMenuItem.Name = "přidatPerioduToolStripMenuItem";
+            přidatPerioduToolStripMenuItem.Size = new Size(380, 44);
+            přidatPerioduToolStripMenuItem.Text = "Přidat periodu";
+            přidatPerioduToolStripMenuItem.Click += přidatPerioduToolStripMenuItem_Click_1;
+            // 
+            // odebratPerioduToolStripMenuItem
+            // 
+            odebratPerioduToolStripMenuItem.Name = "odebratPerioduToolStripMenuItem";
+            odebratPerioduToolStripMenuItem.Size = new Size(380, 44);
+            odebratPerioduToolStripMenuItem.Text = "Odebrat periodu";
+            odebratPerioduToolStripMenuItem.Click += odebratPerioduToolStripMenuItem_Click;
+            // 
             // button1
             // 
-            button1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            button1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             button1.BackColor = Color.White;
             button1.Cursor = Cursors.Hand;
             button1.Font = new Font("Reem Kufi", 10F, FontStyle.Bold);
-            button1.Location = new Point(12, 748);
+            button1.Location = new Point(12, 995);
             button1.Name = "button1";
-            button1.Size = new Size(1896, 64);
+            button1.Size = new Size(2582, 64);
             button1.TabIndex = 23;
             button1.Text = "TREST";
             button1.UseVisualStyleBackColor = false;
@@ -351,7 +394,7 @@
             button3.BackColor = Color.Green;
             button3.Cursor = Cursors.Hand;
             button3.Font = new Font("Reem Kufi", 26.25F, FontStyle.Bold);
-            button3.Location = new Point(771, 884);
+            button3.Location = new Point(1114, 1131);
             button3.Name = "button3";
             button3.Size = new Size(383, 165);
             button3.TabIndex = 25;
@@ -364,6 +407,16 @@
             timer1.Interval = 1000;
             timer1.Tick += timer1_Tick;
             // 
+            // timer2
+            // 
+            timer2.Interval = 1000;
+            timer2.Tick += timer2_Tick;
+            // 
+            // timer3
+            // 
+            timer3.Interval = 1000;
+            timer3.Tick += timer3_Tick;
+            // 
             // tableLayoutPanel1
             // 
             tableLayoutPanel1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
@@ -373,13 +426,13 @@
             tableLayoutPanel1.Controls.Add(labelTime, 0, 0);
             tableLayoutPanel1.Controls.Add(labelPeriod, 0, 1);
             tableLayoutPanel1.Controls.Add(tableLayoutPanel2, 0, 2);
-            tableLayoutPanel1.Location = new Point(318, 27);
+            tableLayoutPanel1.Location = new Point(318, 43);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 3;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
-            tableLayoutPanel1.Size = new Size(1288, 269);
+            tableLayoutPanel1.Size = new Size(1974, 404);
             tableLayoutPanel1.TabIndex = 26;
             // 
             // tableLayoutPanel2
@@ -392,12 +445,12 @@
             tableLayoutPanel2.Controls.Add(labelScoreAway, 2, 0);
             tableLayoutPanel2.Controls.Add(lomeno, 1, 0);
             tableLayoutPanel2.Dock = DockStyle.Fill;
-            tableLayoutPanel2.Location = new Point(0, 178);
+            tableLayoutPanel2.Location = new Point(0, 268);
             tableLayoutPanel2.Margin = new Padding(0);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
             tableLayoutPanel2.RowCount = 1;
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel2.Size = new Size(1288, 91);
+            tableLayoutPanel2.Size = new Size(1974, 136);
             tableLayoutPanel2.TabIndex = 22;
             // 
             // tableLayoutPanel3
@@ -410,20 +463,20 @@
             tableLayoutPanel3.Controls.Add(labelAwayTeam, 1, 0);
             tableLayoutPanel3.Controls.Add(labelFoulsAway, 1, 1);
             tableLayoutPanel3.Controls.Add(labelFoulsHome, 0, 1);
-            tableLayoutPanel3.Location = new Point(12, 329);
+            tableLayoutPanel3.Location = new Point(12, 468);
             tableLayoutPanel3.Name = "tableLayoutPanel3";
             tableLayoutPanel3.RowCount = 2;
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel3.Size = new Size(1896, 167);
+            tableLayoutPanel3.Size = new Size(2582, 302);
             tableLayoutPanel3.TabIndex = 27;
             // 
             // Multimedial_panel_zapas
             // 
-            AutoScaleDimensions = new SizeF(6F, 15F);
+            AutoScaleDimensions = new SizeF(14F, 29F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
-            ClientSize = new Size(1920, 1061);
+            ClientSize = new Size(2606, 1308);
             Controls.Add(tableLayoutPanel3);
             Controls.Add(tableLayoutPanel1);
             Controls.Add(button3);
@@ -433,7 +486,7 @@
             Controls.Add(button_goal_horn_d);
             Controls.Add(pictureHomeTeam);
             Controls.Add(pictureAwayTeam);
-            Font = new Font("Swis721 BlkCn BT", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.None;
             MainMenuStrip = menuStrip1;
             Name = "Multimedial_panel_zapas";
@@ -487,10 +540,17 @@
         private ToolStripMenuItem fotbalToolStripMenuItem;
         private Button button3;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Timer timer3;
         private TableLayoutPanel tableLayoutPanel1;
         private TableLayoutPanel tableLayoutPanel2;
         private TableLayoutPanel tableLayoutPanel3;
         private ToolStripMenuItem helpToolStripMenuItem;
         private ToolStripMenuItem oProgramuToolStripMenuItem;
+        private ToolStripMenuItem korekcePeriodyToolStripMenuItem;
+        private ToolStripMenuItem nastavitVyššíPerioduToolStripMenuItem;
+        private ToolStripMenuItem nastavitNižsíPerioduToolStripMenuItem;
+        private ToolStripMenuItem přidatPerioduToolStripMenuItem;
+        private ToolStripMenuItem odebratPerioduToolStripMenuItem;
     }
 }

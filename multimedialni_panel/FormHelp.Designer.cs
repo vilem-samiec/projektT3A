@@ -44,11 +44,12 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
             tableLayoutPanel1.Controls.Add(button1, 0, 0);
             tableLayoutPanel1.Controls.Add(label1, 1, 0);
-            tableLayoutPanel1.Location = new Point(12, 12);
+            tableLayoutPanel1.Location = new Point(22, 26);
+            tableLayoutPanel1.Margin = new Padding(6, 6, 6, 6);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle());
-            tableLayoutPanel1.Size = new Size(776, 97);
+            tableLayoutPanel1.Size = new Size(1441, 207);
             tableLayoutPanel1.TabIndex = 13;
             // 
             // button1
@@ -57,9 +58,10 @@
             button1.Cursor = Cursors.Hand;
             button1.Font = new Font("Reem Kufi", 10F, FontStyle.Bold);
             button1.ForeColor = Color.Black;
-            button1.Location = new Point(3, 3);
+            button1.Location = new Point(6, 6);
+            button1.Margin = new Padding(6, 6, 6, 6);
             button1.Name = "button1";
-            button1.Size = new Size(67, 35);
+            button1.Size = new Size(124, 75);
             button1.TabIndex = 1;
             button1.Text = "<-";
             button1.UseVisualStyleBackColor = false;
@@ -71,9 +73,10 @@
             label1.Dock = DockStyle.Fill;
             label1.Font = new Font("Reem Kufi", 36F, FontStyle.Bold);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(158, 0);
+            label1.Location = new Point(294, 0);
+            label1.Margin = new Padding(6, 0, 6, 0);
             label1.Name = "label1";
-            label1.Size = new Size(459, 97);
+            label1.Size = new Size(852, 207);
             label1.TabIndex = 2;
             label1.Text = "HELP";
             label1.TextAlign = ContentAlignment.MiddleCenter;
@@ -85,24 +88,27 @@
             label2.AutoSize = true;
             label2.Font = new Font("Reem Kufi", 10F, FontStyle.Bold);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(12, 414);
+            label2.Location = new Point(22, 883);
+            label2.Margin = new Padding(6, 0, 6, 0);
             label2.Name = "label2";
-            label2.Size = new Size(391, 27);
+            label2.Size = new Size(689, 49);
             label2.TabIndex = 14;
             label2.Text = "Celý návod a popis programu je uložen v dokumentaci";
             label2.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // FormHelp
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1486, 960);
             Controls.Add(label2);
             Controls.Add(tableLayoutPanel1);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(6, 6, 6, 6);
             Name = "FormHelp";
             Text = "HELP";
+            WindowState = FormWindowState.Maximized;
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
             ResumeLayout(false);

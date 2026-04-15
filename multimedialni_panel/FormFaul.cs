@@ -9,8 +9,6 @@ namespace multimedialni_panel
             InitializeComponent();
             // wire events
             button1.Click += Button1_Click;
-            numericUpDown1.ValueChanged += NumericUpDown1_ValueChanged;
-            numericUpDown2.ValueChanged += NumericUpDown2_ValueChanged;
             Load += FormFaul_Load;
 
             numericUpDown1.Minimum = 0;
