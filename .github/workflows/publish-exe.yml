@@ -32,17 +32,7 @@ jobs:
         run: |
           dotnet publish multimedialni_panel/multimedialni_panel.csproj -c Release -r win-x64 --self-contained true /p:PublishSingleFile=true -o publish
 
-      - name: Copy exe to repo root
         shell: pwsh
         run: |
           $exe = Get-ChildItem -Path publish -Filter *.exe | Select-Object -First 1
-          if ($exe) { Copy-Item $exe.FullName -Destination "$env:GITHUB_WORKSPACE\$($exe.Name)" -Force } else { Write-Host "No exe found" ; exit 0 }
 
-      - name: Commit and push exe
-        shell: pwsh
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add *.exe || Write-Host "No exe to add"
-          git commit -m "Add built exe (CI) [skip ci]" || Write-Host "No changes to commit"
-          git push
