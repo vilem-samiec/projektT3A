@@ -39,34 +39,35 @@
             // 
             // label1
             // 
-            label1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
             label1.Font = new Font("Reem Kufi", 36F, FontStyle.Bold, GraphicsUnit.Point, 238);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(0, 0);
+            label1.Location = new Point(227, 4);
             label1.Margin = new Padding(0);
             label1.Name = "label1";
-            label1.Size = new Size(935, 180);
+            label1.Size = new Size(480, 172);
             label1.TabIndex = 0;
             label1.Text = "DOMÁCÍ";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
-            label2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            label2.Anchor = AnchorStyles.None;
             label2.AutoSize = true;
             label2.Font = new Font("Reem Kufi", 36F, FontStyle.Bold);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(935, 0);
+            label2.Location = new Point(1198, 4);
             label2.Margin = new Padding(0);
             label2.Name = "label2";
-            label2.Size = new Size(935, 180);
+            label2.Size = new Size(408, 172);
             label2.TabIndex = 1;
             label2.Text = "HOSTÉ";
             label2.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // btnSave
             // 
+            btnSave.Anchor = AnchorStyles.None;
             btnSave.Cursor = Cursors.Hand;
             btnSave.Font = new Font("Reem Kufi", 28.125F, FontStyle.Bold, GraphicsUnit.Point, 238);
             btnSave.ForeColor = Color.Black;
@@ -81,11 +82,11 @@
             // 
             // txtHomeTeam
             // 
-            txtHomeTeam.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            txtHomeTeam.Anchor = AnchorStyles.None;
             txtHomeTeam.Cursor = Cursors.IBeam;
             txtHomeTeam.Font = new Font("Reem Kufi Medium", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 238);
             txtHomeTeam.ForeColor = Color.Black;
-            txtHomeTeam.Location = new Point(6, 186);
+            txtHomeTeam.Location = new Point(6, 231);
             txtHomeTeam.Margin = new Padding(6);
             txtHomeTeam.Name = "txtHomeTeam";
             txtHomeTeam.Size = new Size(923, 79);
@@ -94,11 +95,11 @@
             // 
             // txtAwayTeam
             // 
-            txtAwayTeam.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            txtAwayTeam.Anchor = AnchorStyles.None;
             txtAwayTeam.Cursor = Cursors.IBeam;
             txtAwayTeam.Font = new Font("Reem Kufi Medium", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 238);
             txtAwayTeam.ForeColor = Color.Black;
-            txtAwayTeam.Location = new Point(941, 186);
+            txtAwayTeam.Location = new Point(941, 231);
             txtAwayTeam.Margin = new Padding(6);
             txtAwayTeam.Name = "txtAwayTeam";
             txtAwayTeam.Size = new Size(923, 79);
@@ -107,6 +108,7 @@
             // 
             // tableLayoutPanel1
             // 
+            tableLayoutPanel1.Anchor = AnchorStyles.None;
             tableLayoutPanel1.ColumnCount = 2;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
